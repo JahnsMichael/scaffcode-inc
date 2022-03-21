@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://_dev/primo/Scenes/DropZoneBlue1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_dev/primo/Scenes/DragBlue1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_dev/primo/Scenes/DropZoneRed1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://_dev/primo/Scenes/DragRed1.tscn" type="PackedScene" id=4]
+
+[node name="Testing" type="Node2D"]
+
+[node name="DropZoneBlue1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 200 )
+
+[node name="DropZoneBlue2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 200 )
+
+[node name="DropZoneBlue3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 350 )
+
+[node name="DropZoneBlue4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 350 )
+
+[node name="DropZoneBlue5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 500 )
+
+[node name="DropZoneBlue6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 500 )
+
+[node name="DropZoneRed1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 800, 200 )
+
+[node name="DropZoneRed2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1000, 200 )
+
+[node name="DropZoneRed3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 800, 350 )
+
+[node name="DropZoneRed4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1000, 350 )
+
+[node name="DropZoneRed5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 800, 500 )
+
+[node name="DropZoneRed6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1000, 500 )
+
+[node name="DragBlue1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 244, 80 )
+
+[node name="DragBlue2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 398, 85 )
+index = 1
+
+[node name="DragRed1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 812, 83 )
+
+[node name="DragRed2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 990, 88 )
+index = 5
