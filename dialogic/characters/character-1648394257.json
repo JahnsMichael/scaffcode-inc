@@ -1,0 +1,21 @@
+{
+	"color": "#ff002eff",
+	"description": "Seorang pro gamer ulung",
+	"display_name": "Primo",
+	"display_name_bool": true,
+	"id": "character-1648394257.json",
+	"mirror_portraits": false,
+	"name": "Primo Giancarlo Uneputty",
+	"nickname": "Ace",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://icon.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}
