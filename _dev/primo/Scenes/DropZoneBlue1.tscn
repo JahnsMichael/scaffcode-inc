@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://_dev/primo/Scripts/DropZoneBlue1.gd" type="Script" id=1]
+
+[node name="DropZoneBlue1" type="Position2D" groups=["zone", "zone_blue"]]
+script = ExtResource( 1 )
