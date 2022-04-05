@@ -1,16 +1,22 @@
-extends Node2D
+extends Area2D
+class_name Draggable
 
 var selected = false
 var rest_point
 var rest_node
-var rest_nodes = []
-var blue_nodes = []
+var spawn_node
+var drop_zones = []
+var spawners = []
+
 export var index = 0
 
+signal draggable_dropped(draggable)
+
 func _ready():
-	rest_nodes = get_tree().get_nodes_in_group("zone")
-	blue_nodes = get_tree().get_nodes_in_group("zone_blue")
-	rest_node = blue_nodes[index]
+	spawners = get_tree().get_nodes_in_group("spawner")
+	drop_zones = get_tree().get_nodes_in_group("zone")
+	spawn_node = spawners[index]
+	rest_node = spawners[index]
 	rest_point = rest_node.global_position
 	rest_node.select()
 
@@ -30,12 +36,15 @@ func _input(event):
 			selected = false
 			var shortest_dist = 60
 			
-			for child in blue_nodes:
+			for child in drop_zones:
 				var distance = global_position.distance_to(child.global_position)
 				
 				if distance < shortest_dist and child.filled == false:
 					rest_node.deselect()
+					spawn_node.deselect()
 					rest_node = child
 					child.select()
 					rest_point = child.global_position
 					shortest_dist = distance
+					
+					emit_signal("draggable_dropped", self)
