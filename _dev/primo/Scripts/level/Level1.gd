@@ -8,7 +8,7 @@ func _ready():
 	$DraggableLabel.connect("draggable_dropped", self, "_on_draggable_dropped")
 
 func _on_draggable_dropped(draggable: Draggable):
-	var spawn_point = draggable.spawn_node.global_position
+	var spawn_point = draggable.spawn_point
 	var index = draggable.index
 	
 	if draggable.is_in_group("draggable_image"):

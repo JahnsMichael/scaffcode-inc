@@ -1,7 +1,6 @@
 extends Position2D
 class_name Spawner
 
-
 var filled = false
 
 func _draw():

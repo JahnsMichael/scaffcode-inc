@@ -4,6 +4,7 @@ class_name Draggable
 var selected = false
 var rest_point
 var rest_node
+var spawn_point
 var spawn_node
 var drop_zones = []
 var spawners = []
@@ -17,6 +18,7 @@ func _ready():
 	drop_zones = get_tree().get_nodes_in_group("zone")
 	spawn_node = spawners[index]
 	rest_node = spawners[index]
+	spawn_point = spawn_node.global_position
 	rest_point = rest_node.global_position
 	rest_node.select()
 
@@ -40,11 +42,14 @@ func _input(event):
 				var distance = global_position.distance_to(child.global_position)
 				
 				if distance < shortest_dist and child.filled == false:
-					rest_node.deselect()
-					spawn_node.deselect()
+					
+					if rest_node == spawn_node:
+						spawn_node.deselect()
+						emit_signal("draggable_dropped", self)
+					else:
+						rest_node.deselect()
+					
 					rest_node = child
 					child.select()
 					rest_point = child.global_position
 					shortest_dist = distance
-					
-					emit_signal("draggable_dropped", self)
