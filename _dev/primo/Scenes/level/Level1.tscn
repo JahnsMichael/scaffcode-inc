@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://_dev/primo/Scenes/level/DraggableImage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_dev/primo/Scenes/level/Dropzone.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://_dev/primo/Scenes/level/Spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://_dev/primo/Scenes/level/RunButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://_dev/primo/Scenes/level/ResetButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://_dev/primo/Scenes/level/Trashzone.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 4 )
@@ -34,6 +35,9 @@ position = Vector2( 115, 245 )
 
 [node name="Spawner2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 117, 390 )
+
+[node name="Trashzone" parent="." instance=ExtResource( 8 )]
+position = Vector2( 970, 541 )
 
 [node name="DraggableImage" parent="." instance=ExtResource( 1 )]
 position = Vector2( 257, 249 )

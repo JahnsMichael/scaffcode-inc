@@ -78,6 +78,11 @@ _global_script_classes=[ {
 "class": "Spawner",
 "language": "GDScript",
 "path": "res://_dev/primo/Scripts/level/Spawner.gd"
+}, {
+"base": "Position2D",
+"class": "Trashzone",
+"language": "GDScript",
+"path": "res://_dev/primo/Scripts/level/Trashzone.gd"
 } ]
 _global_script_class_icons={
 "DTS": "",
@@ -93,7 +98,8 @@ _global_script_class_icons={
 "Draggable": "",
 "Dropzone": "",
 "HistoryRow": "",
-"Spawner": ""
+"Spawner": "",
+"Trashzone": ""
 }
 
 [application]

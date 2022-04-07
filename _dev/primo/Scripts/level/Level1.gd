@@ -4,8 +4,9 @@ var draggable_img_scene: PackedScene = preload("res://_dev/primo/Scenes/level/Dr
 var draggable_label_scene: PackedScene = preload("res://_dev/primo/Scenes/level/DraggableLabel.tscn")
 
 func _ready():
-	$DraggableImage.connect("draggable_dropped", self, "_on_draggable_dropped")
-	$DraggableLabel.connect("draggable_dropped", self, "_on_draggable_dropped")
+	var draggables = get_tree().get_nodes_in_group("draggable")
+	for drag in draggables:
+		drag.connect("draggable_dropped", self, "_on_draggable_dropped")
 
 func _on_draggable_dropped(draggable: Draggable):
 	var spawn_point = draggable.spawn_point
