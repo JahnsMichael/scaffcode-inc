@@ -37,7 +37,6 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT and not event.pressed:
 			selected = false
 			var shortest_dist = 60
-			_is_draggable_over_trash(shortest_dist)
 			
 			for child in drop_zones:
 				var distance = global_position.distance_to(child.global_position)
@@ -54,12 +53,16 @@ func _input(event):
 					child.select()
 					rest_point = child.global_position
 					shortest_dist = distance
+			
+			_is_draggable_over_trash(shortest_dist)
 
 func _is_draggable_over_trash(shortest_dist: int):
 	var trash_can = get_tree().get_nodes_in_group("trash")
 	var distance = global_position.distance_to(trash_can[0].global_position)
+	
 	if distance < shortest_dist:
-		_delete_node()
+		if rest_node != spawn_node:
+			_delete_node()
 	return
 
 func _delete_node():

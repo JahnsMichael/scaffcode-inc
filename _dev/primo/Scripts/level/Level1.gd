@@ -24,6 +24,7 @@ func _spawn_new_draggable_img(sprite_path: String, spawn_point: Vector2, index: 
 	draggable.position = spawn_point
 	draggable.index = index
 	add_child(draggable)
+	#print(get_tree().get_nodes_in_group("draggable"))
 
 func _spawn_new_draggable_label(label_text: String, spawn_point: Vector2, index:int) -> void:
 	var draggable: Draggable = draggable_label_scene.instance()
@@ -32,3 +33,4 @@ func _spawn_new_draggable_label(label_text: String, spawn_point: Vector2, index:
 	draggable.position = spawn_point
 	draggable.index = index
 	add_child(draggable)
+	#print(get_tree().get_nodes_in_group("draggable"))
