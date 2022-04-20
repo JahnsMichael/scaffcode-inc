@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gameplay/components/Dropzone/Dropzone.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.670588, 0.247059, 0.247059, 1 )
+expand_margin_top = 4.0
+expand_margin_bottom = 5.0
+
+[node name="Dropzone" type="MarginContainer" groups=["dropzone"]]
+anchor_left = 0.00195312
+anchor_top = 0.00166667
+anchor_right = 0.119141
+anchor_bottom = 0.201667
+margin_left = -1.0
+margin_top = -1.0
+margin_right = -1.0
+margin_bottom = -1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 100, 100 )
+color = Color( 0.690196, 0.690196, 0.690196, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 128.0
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClearButton" type="Button" parent="VBoxContainer"]
+margin_top = 104.0
+margin_right = 100.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+custom_styles/normal = SubResource( 1 )
+text = "Clear"
+
+[connection signal="pressed" from="VBoxContainer/ClearButton" to="." method="_on_ClearButton_pressed"]
