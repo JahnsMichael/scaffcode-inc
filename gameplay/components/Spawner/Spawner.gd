@@ -2,7 +2,6 @@ extends MarginContainer
 class_name Spawner
 
 export(String, FILE, "*.png") var texture_path
-
 var texture
 
 func _ready() -> void:
