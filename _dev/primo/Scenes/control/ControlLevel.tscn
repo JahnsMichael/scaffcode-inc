@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://_dev/primo/Scripts/control/ControlLevel.gd" type="Script" id=1]
+[ext_resource path="res://_dev/primo/Scenes/control/Reset.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_dev/primo/Scenes/control/DragImage.tscn" type="PackedScene" id=3]
+[ext_resource path="res://_dev/primo/Scenes/control/DragLabel.tscn" type="PackedScene" id=4]
+
+[node name="ControlLevel" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VLayout" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 593.0
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VLayout"]
+margin_right = 1010.0
+margin_bottom = 31.0
+
+[node name="Reset" parent="VLayout/ButtonContainer" instance=ExtResource( 2 )]
+margin_right = 103.0
+margin_bottom = 31.0
+
+[node name="HLayout" type="HBoxContainer" parent="VLayout"]
+margin_top = 35.0
+margin_right = 1010.0
+margin_bottom = 67.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VLayout/HLayout"]
+margin_right = 14.0
+margin_bottom = 32.0
+
+[node name="DraggableContainer" type="VBoxContainer" parent="VLayout/HLayout/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 25.0
+
+[node name="DragImage" parent="VLayout/HLayout/PanelContainer/DraggableContainer" instance=ExtResource( 3 )]
+margin_right = 0.0
+margin_bottom = 0.0
+texture_path = "res://icon.png"
+
+[node name="DragLabel" parent="VLayout/HLayout/PanelContainer/DraggableContainer" instance=ExtResource( 4 )]
+margin_top = 4.0
+margin_right = 0.0
+margin_bottom = 18.0
+label_text = "Hello"
+
+[node name="GridContainer" type="GridContainer" parent="VLayout/HLayout"]
+margin_left = 18.0
+margin_right = 18.0
+margin_bottom = 32.0
