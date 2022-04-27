@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://gameplay/components/Dropzone/ExDropzone.gd" type="Script" id=1]
+
+[node name="ExDropzone" type="MarginContainer" groups=["dropzone"]]
+anchor_right = 0.117188
+anchor_bottom = 0.2
+margin_right = -80.0
+margin_bottom = -80.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+texture_path_1 = "res://_dev/jahns/Resources/pointer-default.png"
+texture_path_2 = "res://icon.png"
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 100, 100 )
+color = Color( 0.690196, 0.690196, 0.690196, 1 )
+
+[node name="Icon" type="TextureRect" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
