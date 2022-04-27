@@ -3,8 +3,8 @@ class_name Spawner
 
 export(String, FILE, "*.png") var texture_path
 
-var filled = false
 var texture
+
 
 func _ready() -> void:
 	add_to_group("DRAGGABLE")
@@ -13,14 +13,6 @@ func _ready() -> void:
 		return
 	$TextureRect.texture = load(texture_path)
 	texture = $TextureRect.texture
-
-func select():
-	$Background.color = Color.midnightblue
-	filled = true
-
-func deselect():
-	$Background.color = Color.white
-	filled = false
 
 func get_drag_data(_position: Vector2):
 	set_drag_preview(_get_preview_control())
