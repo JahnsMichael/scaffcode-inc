@@ -14,7 +14,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-texture_path = "res://icon.png"
 
 [node name="Background" type="ColorRect" parent="."]
 margin_left = 10.0
