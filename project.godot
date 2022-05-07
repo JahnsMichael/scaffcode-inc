@@ -64,10 +64,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://_dev/primo/Scripts/level/Draggable.gd"
 }, {
-"base": "Position2D",
+"base": "MarginContainer",
 "class": "Dropzone",
 "language": "GDScript",
-"path": "res://_dev/primo/Scripts/level/Dropzone.gd"
+"path": "res://gameplay/components/Dropzone/Dropzone.gd"
 }, {
 "base": "PanelContainer",
 "class": "HistoryRow",
