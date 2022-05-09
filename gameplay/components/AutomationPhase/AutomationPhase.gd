@@ -31,6 +31,8 @@ var video_expanded = false
 # Methods
 
 func _ready():
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	clean_up()
 	generate_spawners()
 	generate_dropzones()
