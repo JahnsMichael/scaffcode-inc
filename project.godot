@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "ClickableObject",
+"class": "ChangeSceneButton",
+"language": "GDScript",
+"path": "res://gameplay/components/Clickable/ChangeSceneButton.gd"
+}, {
+"base": "Area2D",
+"class": "ClickableObject",
+"language": "GDScript",
+"path": "res://gameplay/components/Clickable/ClickableObject.gd"
+}, {
 "base": "Reference",
 "class": "DTS",
 "language": "GDScript",
@@ -85,6 +95,8 @@ _global_script_classes=[ {
 "path": "res://_dev/primo/Scripts/level/Trashzone.gd"
 } ]
 _global_script_class_icons={
+"ChangeSceneButton": "",
+"ClickableObject": "",
 "DTS": "",
 "Dialogic": "",
 "DialogicAnimaPropertiesHelper": "",
