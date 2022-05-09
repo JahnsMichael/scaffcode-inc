@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://_dev/jahns/Scripts/MousePointer.gd" type="Script" id=1]
-[ext_resource path="res://_dev/jahns/Resources/pointer-default.png" type="Texture" id=2]
-
-[node name="MousePointer" type="Sprite"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 2 )
-script = ExtResource( 1 )

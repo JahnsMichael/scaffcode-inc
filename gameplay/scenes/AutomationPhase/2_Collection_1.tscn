@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://gameplay/resources/images/texts/var_10.png" type="Texture" id=2]
+[ext_resource path="res://gameplay/resources/images/items/fruit_apple.png" type="Texture" id=3]
+
+[node name="AutomationPhase" instance=ExtResource( 1 )]
+answers_texture = [ ExtResource( 3 ), ExtResource( 2 ) ]
+bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 apel ke dalam kotak apel
+[code]
+1 [color=red]Apel[/color][] kotakApel = [color=red]Apel[/color][10]()
+2 kotakApel[color=green].tambah[/color](@1, @2)
+[/code]"
