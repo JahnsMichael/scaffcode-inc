@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Localization/translation_service.gd"
 }, {
+"base": "ClickableObject",
+"class": "DialogButton",
+"language": "GDScript",
+"path": "res://gameplay/components/Clickable/DialogButton.gd"
+}, {
 "base": "Node",
 "class": "Dialogic",
 "language": "GDScript",
@@ -98,6 +103,7 @@ _global_script_class_icons={
 "ChangeSceneButton": "",
 "ClickableObject": "",
 "DTS": "",
+"DialogButton": "",
 "Dialogic": "",
 "DialogicAnimaPropertiesHelper": "",
 "DialogicAnimaResources": "",
@@ -119,10 +125,6 @@ _global_script_class_icons={
 config/name="TA Game-Based Learning"
 run/main_scene="res://gameplay/scenes/Main.tscn"
 config/icon="res://icon.png"
-
-[editor_plugins]
-
-enabled=PoolStringArray( "dialogic" )
 
 [editor_plugins]
 
