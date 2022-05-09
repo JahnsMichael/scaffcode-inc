@@ -1,0 +1,37 @@
+{
+	"glossary": [
+
+	],
+	"variables": [
+		{
+			"id": "1651492546-695",
+			"name": "Variabel",
+			"type": 0,
+			"value": "10"
+		},
+		{
+			"id": "1651492553-497",
+			"name": "Koleksi",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1651492562-861",
+			"name": "Percabangan",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1651492576-848",
+			"name": "Iterasi",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1651492607-895",
+			"name": "Pertama kali",
+			"type": 0,
+			"value": "0"
+		}
+	]
+}

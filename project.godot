@@ -124,6 +124,10 @@ config/icon="res://icon.png"
 
 enabled=PoolStringArray( "dialogic" )
 
+[editor_plugins]
+
+enabled=PoolStringArray( "dialogic" )
+
 [importer_defaults]
 
 texture={

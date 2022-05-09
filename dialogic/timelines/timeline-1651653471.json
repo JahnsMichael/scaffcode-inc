@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Selamat, kamu telah menyelesaikan bagian Percabangan/Kondisi. Kamu bisa memilih topik selanjutnya dengan berbincang kepada pemilik toko."
+		},
+		{
+			"definition": "1651492562-861",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651653471.json",
+		"name": "Advi-Percabangan Done"
+	}
+}
