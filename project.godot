@@ -84,6 +84,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://gameplay/components/Dropzone/Dropzone.gd"
 }, {
+"base": "MarginContainer",
+"class": "ExDropzone",
+"language": "GDScript",
+"path": "res://gameplay/components/Dropzone/ExDropzone.gd"
+}, {
 "base": "PanelContainer",
 "class": "HistoryRow",
 "language": "GDScript",
@@ -115,6 +120,7 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "Draggable": "",
 "Dropzone": "",
+"ExDropzone": "",
 "HistoryRow": "",
 "Spawner": "",
 "Trashzone": ""
