@@ -23,7 +23,7 @@ var spawner_scene = preload("res://gameplay/components/Spawner/Spawner.tscn")
 
 # Constants
 const empty_answer_bbcode_template = "[color=grey][wave amp=50 freq=2]..%s..[/wave][/color]"
-const filled_answer_bbcode_template = "[img=30]%s[/img]"
+const filled_answer_bbcode_template = "[img=%s]%s[/img]"
 
 # States
 var video_expanded = false
@@ -57,8 +57,9 @@ func generate_dropzones():
 		dropzone_container.add_child(dropzone)
 
 func generate_code_snippet():
+	code_textbox.bbcode_text = bbcode_code_snippet
 	for i in len(answers_texture):
-		code_textbox.bbcode_text = replace_empty(code_textbox.bbcode_text, i)
+		code_textbox.bbcode_text = replace_empty(code_textbox.bbcode_text, i+1)
 		
 func generate_video():
 	video_player.stream = video_stream
@@ -71,7 +72,8 @@ func replace_empty(text: String, index: int):
 func replace_filled(text: String, index: int, texture: Texture):
 	var regex = RegEx.new()
 	regex.compile("@%s" % index)
-	return regex.sub(text, filled_answer_bbcode_template % texture.resource_path)
+	var width = float(40*texture.get_width()) / texture.get_height()
+	return regex.sub(text, filled_answer_bbcode_template % [width ,texture.resource_path])
 
 func _on_data_changed(_dropzone: Dropzone):
 	var new_bbcode_text = bbcode_code_snippet

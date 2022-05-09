@@ -1,18 +1,45 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.gd" type="Script" id=1]
 [ext_resource path="res://_dev/jahns/Resources/video_example.webm" type="VideoStream" id=2]
 [ext_resource path="res://gameplay/components/Dropzone/Dropzone.tscn" type="PackedScene" id=3]
-[ext_resource path="res://gameplay/resources/images/level-background.jpg" type="Texture" id=4]
+[ext_resource path="res://gameplay/resources/images/backgrounds/level-background.jpg" type="Texture" id=4]
 [ext_resource path="res://gameplay/components/Spawner/Spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=6]
 [ext_resource path="res://gameplay/resources/fonts/mono.tres" type="DynamicFont" id=7]
 [ext_resource path="res://gameplay/resources/fonts/bold.tres" type="DynamicFont" id=8]
-[ext_resource path="res://gameplay/resources/images/juicer_apple.png" type="Texture" id=9]
-[ext_resource path="res://gameplay/resources/images/fruit_apple.png" type="Texture" id=10]
-[ext_resource path="res://gameplay/resources/images/fruit_banana.png" type="Texture" id=11]
+[ext_resource path="res://gameplay/resources/images/items/fruit_apple.png" type="Texture" id=10]
+[ext_resource path="res://gameplay/resources/images/items/fruit_banana.png" type="Texture" id=11]
 [ext_resource path="res://gameplay/resources/themes/AutomationPhase_Run/AutomationPhase_Run_Default.tres" type="StyleBox" id=12]
 [ext_resource path="res://gameplay/resources/themes/AutomationPhase_Reset/AutomationPhase_Reset_Default.tres" type="StyleBox" id=13]
+[ext_resource path="res://gameplay/resources/images/items/fruit_orange.png" type="Texture" id=14]
+[ext_resource path="res://gameplay/resources/images/texts/var_jus.png" type="Texture" id=15]
+[ext_resource path="res://gameplay/resources/images/items/fruit_avocado.png" type="Texture" id=16]
+[ext_resource path="res://gameplay/resources/images/texts/op_gte.png" type="Texture" id=17]
+[ext_resource path="res://gameplay/resources/images/texts/var_10.png" type="Texture" id=18]
+[ext_resource path="res://gameplay/resources/images/texts/op_inequal.png" type="Texture" id=19]
+[ext_resource path="res://gameplay/resources/images/texts/op_div.png" type="Texture" id=20]
+[ext_resource path="res://gameplay/resources/images/texts/op_minus.png" type="Texture" id=21]
+[ext_resource path="res://gameplay/resources/images/texts/var_jumlahJus.png" type="Texture" id=22]
+[ext_resource path="res://gameplay/resources/images/texts/func_tambah.png" type="Texture" id=23]
+[ext_resource path="res://gameplay/resources/images/texts/type_Pisang.png" type="Texture" id=24]
+[ext_resource path="res://gameplay/resources/images/texts/op_equal.png" type="Texture" id=25]
+[ext_resource path="res://gameplay/resources/images/texts/type_Apel.png" type="Texture" id=26]
+[ext_resource path="res://gameplay/resources/images/texts/statement_if.png" type="Texture" id=27]
+[ext_resource path="res://gameplay/resources/images/texts/statement_else.png" type="Texture" id=28]
+[ext_resource path="res://gameplay/resources/images/texts/func_ambilBuah.png" type="Texture" id=29]
+[ext_resource path="res://gameplay/resources/images/texts/op_plus.png" type="Texture" id=30]
+[ext_resource path="res://gameplay/resources/images/texts/type_Alpukat.png" type="Texture" id=31]
+[ext_resource path="res://gameplay/resources/images/texts/var_buah.png" type="Texture" id=32]
+[ext_resource path="res://gameplay/resources/images/texts/func_blender.png" type="Texture" id=33]
+[ext_resource path="res://gameplay/resources/images/texts/op_lte.png" type="Texture" id=34]
+[ext_resource path="res://gameplay/resources/images/texts/func_sajikan.png" type="Texture" id=35]
+[ext_resource path="res://gameplay/resources/images/texts/type_Jeruk.png" type="Texture" id=36]
+[ext_resource path="res://gameplay/resources/images/texts/op_gt.png" type="Texture" id=37]
+[ext_resource path="res://gameplay/resources/images/texts/func_buang.png" type="Texture" id=38]
+[ext_resource path="res://gameplay/resources/images/texts/op_lt.png" type="Texture" id=39]
+[ext_resource path="res://gameplay/resources/images/texts/statement_while.png" type="Texture" id=40]
+[ext_resource path="res://gameplay/resources/images/texts/type_Jus.png" type="Texture" id=41]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -33,13 +60,13 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-spawners_texture = [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ]
-answers_texture = [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ]
+spawners_texture = [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 32 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 24 ), ExtResource( 36 ), ExtResource( 41 ), ExtResource( 33 ), ExtResource( 23 ), ExtResource( 35 ), ExtResource( 29 ), ExtResource( 38 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 17 ), ExtResource( 39 ), ExtResource( 34 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 30 ), ExtResource( 21 ), ExtResource( 20 ) ]
+answers_texture = [ ExtResource( 10 ), ExtResource( 32 ), ExtResource( 15 ) ]
 bbcode_code_snippet = "[b]Objektif[/b]: Buat 1 jus apel
 [code]
-1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color]([color=grey][wave amp=50 freq=2]@1[/wave][/color])
-2 [color=red]Jus[/color] jus = [color=green]blender[/color]([color=grey][wave amp=50 freq=2]@2[/wave][/color])
-3 [color=green]sajikan[/color]([color=grey][wave amp=50 freq=2]@3[/wave][/color])
+1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color](@1)
+2 [color=red]Jus[/color] jus = [color=green]blender[/color](@2)
+3 [color=green]sajikan[/color](@3)
 [/code]"
 video_stream = ExtResource( 2 )
 
@@ -179,7 +206,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer"]
@@ -372,7 +399,6 @@ text = "Objektif: Buat 1 jus apel
 2 Jus jus = blender(..2..)
 3 sajikan(..3..)
 "
-scroll_following = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -468,7 +494,7 @@ size_flags_vertical = 3
 stream = ExtResource( 2 )
 paused = true
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="Popup" type="Popup" parent="."]
