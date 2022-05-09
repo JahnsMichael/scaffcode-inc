@@ -1,5 +1,4 @@
 extends Position2D
-class_name Dropzone
 
 var filled = false
 

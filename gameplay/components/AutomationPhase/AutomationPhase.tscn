@@ -1,10 +1,45 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.gd" type="Script" id=1]
 [ext_resource path="res://_dev/jahns/Resources/video_example.webm" type="VideoStream" id=2]
 [ext_resource path="res://gameplay/components/Dropzone/Dropzone.tscn" type="PackedScene" id=3]
-[ext_resource path="res://gameplay/resources/images/level-background.jpg" type="Texture" id=4]
+[ext_resource path="res://gameplay/resources/images/backgrounds/level-background.jpg" type="Texture" id=4]
 [ext_resource path="res://gameplay/components/Spawner/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=6]
+[ext_resource path="res://gameplay/resources/fonts/mono.tres" type="DynamicFont" id=7]
+[ext_resource path="res://gameplay/resources/fonts/bold.tres" type="DynamicFont" id=8]
+[ext_resource path="res://gameplay/resources/images/items/fruit_apple.png" type="Texture" id=10]
+[ext_resource path="res://gameplay/resources/images/items/fruit_banana.png" type="Texture" id=11]
+[ext_resource path="res://gameplay/resources/themes/AutomationPhase_Run/AutomationPhase_Run_Default.tres" type="StyleBox" id=12]
+[ext_resource path="res://gameplay/resources/themes/AutomationPhase_Reset/AutomationPhase_Reset_Default.tres" type="StyleBox" id=13]
+[ext_resource path="res://gameplay/resources/images/items/fruit_orange.png" type="Texture" id=14]
+[ext_resource path="res://gameplay/resources/images/texts/var_jus.png" type="Texture" id=15]
+[ext_resource path="res://gameplay/resources/images/items/fruit_avocado.png" type="Texture" id=16]
+[ext_resource path="res://gameplay/resources/images/texts/op_gte.png" type="Texture" id=17]
+[ext_resource path="res://gameplay/resources/images/texts/var_10.png" type="Texture" id=18]
+[ext_resource path="res://gameplay/resources/images/texts/op_inequal.png" type="Texture" id=19]
+[ext_resource path="res://gameplay/resources/images/texts/op_div.png" type="Texture" id=20]
+[ext_resource path="res://gameplay/resources/images/texts/op_minus.png" type="Texture" id=21]
+[ext_resource path="res://gameplay/resources/images/texts/var_jumlahJus.png" type="Texture" id=22]
+[ext_resource path="res://gameplay/resources/images/texts/func_tambah.png" type="Texture" id=23]
+[ext_resource path="res://gameplay/resources/images/texts/type_Pisang.png" type="Texture" id=24]
+[ext_resource path="res://gameplay/resources/images/texts/op_equal.png" type="Texture" id=25]
+[ext_resource path="res://gameplay/resources/images/texts/type_Apel.png" type="Texture" id=26]
+[ext_resource path="res://gameplay/resources/images/texts/statement_if.png" type="Texture" id=27]
+[ext_resource path="res://gameplay/resources/images/texts/statement_else.png" type="Texture" id=28]
+[ext_resource path="res://gameplay/resources/images/texts/func_ambilBuah.png" type="Texture" id=29]
+[ext_resource path="res://gameplay/resources/images/texts/op_plus.png" type="Texture" id=30]
+[ext_resource path="res://gameplay/resources/images/texts/type_Alpukat.png" type="Texture" id=31]
+[ext_resource path="res://gameplay/resources/images/texts/var_buah.png" type="Texture" id=32]
+[ext_resource path="res://gameplay/resources/images/texts/func_blender.png" type="Texture" id=33]
+[ext_resource path="res://gameplay/resources/images/texts/op_lte.png" type="Texture" id=34]
+[ext_resource path="res://gameplay/resources/images/texts/func_sajikan.png" type="Texture" id=35]
+[ext_resource path="res://gameplay/resources/images/texts/type_Jeruk.png" type="Texture" id=36]
+[ext_resource path="res://gameplay/resources/images/texts/op_gt.png" type="Texture" id=37]
+[ext_resource path="res://gameplay/resources/images/texts/func_buang.png" type="Texture" id=38]
+[ext_resource path="res://gameplay/resources/images/texts/op_lt.png" type="Texture" id=39]
+[ext_resource path="res://gameplay/resources/images/texts/statement_while.png" type="Texture" id=40]
+[ext_resource path="res://gameplay/resources/images/texts/type_Jus.png" type="Texture" id=41]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -17,24 +52,6 @@ bg_color = Color( 1, 1, 1, 0.74902 )
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0.572549, 0.219608, 1 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-expand_margin_top = 3.0
-expand_margin_bottom = 3.0
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 1, 0.396078, 0.396078, 1 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-expand_margin_top = 3.0
-expand_margin_bottom = 3.0
-
 [node name="AutomationPhase" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -43,6 +60,15 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+spawners_texture = [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 32 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 24 ), ExtResource( 36 ), ExtResource( 41 ), ExtResource( 33 ), ExtResource( 23 ), ExtResource( 35 ), ExtResource( 29 ), ExtResource( 38 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 17 ), ExtResource( 39 ), ExtResource( 34 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 30 ), ExtResource( 21 ), ExtResource( 20 ) ]
+answers_texture = [ ExtResource( 10 ), ExtResource( 32 ), ExtResource( 15 ) ]
+bbcode_code_snippet = "[b]Objektif[/b]: Buat 1 jus apel
+[code]
+1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color](@1)
+2 [color=red]Jus[/color] jus = [color=green]blender[/color](@2)
+3 [color=green]sajikan[/color](@3)
+[/code]"
+video_stream = ExtResource( 2 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -88,6 +114,7 @@ custom_styles/panel = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 0
+custom_fonts/font = ExtResource( 6 )
 text = "Pilihan Jawaban"
 align = 1
 valign = 1
@@ -136,7 +163,6 @@ columns = 2
 [node name="Spawner2" parent="Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 5 )]
 margin_left = 124.0
 margin_right = 244.0
-texture_path = "res://_dev/jahns/Resources/pointer-default.png"
 
 [node name="AnswerContainer" type="VBoxContainer" parent="Margin/HBoxContainer"]
 margin_left = 302.0
@@ -157,6 +183,7 @@ custom_styles/panel = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 0
+custom_fonts/font = ExtResource( 6 )
 text = "Slot Jawaban"
 align = 1
 valign = 1
@@ -179,12 +206,12 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer"]
 margin_right = 299.0
-margin_bottom = 312.0
+margin_bottom = 276.0
 size_flags_horizontal = 3
 custom_constants/margin_right = 27
 custom_constants/margin_top = 16
@@ -195,7 +222,7 @@ custom_constants/margin_bottom = 16
 margin_left = 27.0
 margin_top = 16.0
 margin_right = 272.0
-margin_bottom = 296.0
+margin_bottom = 260.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
@@ -208,8 +235,8 @@ anchor_bottom = 0.0
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 120.0
-margin_bottom = 138.0
-answer_texture_path = "res://icon.png"
+margin_bottom = 120.0
+answer_texture = ExtResource( 10 )
 
 [node name="Dropzone2" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
 anchor_left = 0.0
@@ -219,8 +246,9 @@ anchor_bottom = 0.0
 margin_left = 124.0
 margin_top = 0.0
 margin_right = 244.0
-margin_bottom = 138.0
-answer_texture_path = "res://_dev/jahns/Resources/pointer-default.png"
+margin_bottom = 120.0
+answer_texture = ExtResource( 11 )
+label_num = 2
 
 [node name="Dropzone3" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
 anchor_left = 0.0
@@ -228,10 +256,11 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 142.0
+margin_top = 124.0
 margin_right = 120.0
-margin_bottom = 280.0
-answer_texture_path = "res://_dev/jahns/Resources/pointer-default.png"
+margin_bottom = 244.0
+answer_texture = ExtResource( 11 )
+label_num = 3
 
 [node name="Dropzone4" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
 anchor_left = 0.0
@@ -239,10 +268,11 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 124.0
-margin_top = 142.0
+margin_top = 124.0
 margin_right = 244.0
-margin_bottom = 280.0
-answer_texture_path = "res://icon.png"
+margin_bottom = 244.0
+answer_texture = ExtResource( 10 )
+label_num = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Margin/HBoxContainer"]
 margin_left = 605.0
@@ -270,17 +300,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -10.0
+custom_constants/separation = 7
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer"]
-margin_top = 19.0
-margin_right = 299.0
-margin_bottom = 33.0
+margin_top = 16.0
+margin_right = 240.0
+margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 size_flags_stretch_ratio = 8.53
+custom_fonts/font = ExtResource( 6 )
 text = "Program"
 valign = 1
 __meta__ = {
@@ -288,27 +320,37 @@ __meta__ = {
 }
 
 [node name="Run" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer"]
-margin_left = 303.0
-margin_top = 19.0
-margin_right = 338.0
-margin_bottom = 33.0
+margin_left = 247.0
+margin_top = 14.0
+margin_right = 320.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_styles/normal = SubResource( 3 )
-text = "Run"
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Jalankan"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Reset" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer"]
-margin_left = 342.0
-margin_top = 19.0
-margin_right = 378.0
-margin_bottom = 33.0
+margin_left = 327.0
+margin_top = 14.0
+margin_right = 379.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_styles/normal = SubResource( 4 )
-text = "Reset"
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 13 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 13 )
+custom_styles/disabled = ExtResource( 13 )
+custom_styles/normal = ExtResource( 13 )
+text = "Ulang"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -335,26 +377,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/MarginContainer"]
+[node name="Code" type="RichTextLabel" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 382.0
 margin_bottom = 210.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/mono_font = ExtResource( 7 )
+custom_fonts/bold_font = ExtResource( 8 )
+custom_fonts/normal_font = ExtResource( 6 )
 bbcode_enabled = true
-bbcode_text = "// Objektif: Buat 1 jus apel
-[table=1]
-[cell]Hello[/cell]
-[/table]
-1 [color=red]Apel[/color] [s]buah[/s] = [color=green]ambilBuah(...1..., ...4...)[/color]
-2 Jus jus = blender(...2...)
-3 sajikan(...3...)"
-text = "// Objektif: Buat 1 jus apel
-Hello
-1 Apel buah = ambilBuah(...1..., ...4...)
-2 Jus jus = blender(...2...)
-3 sajikan(...3...)"
-scroll_following = true
+bbcode_text = "[b]Objektif[/b]: Buat 1 jus apel
+[code]
+1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color]([color=grey][wave amp=50 freq=2]..1..[/wave][/color])
+2 [color=red]Jus[/color] jus = [color=green]blender[/color]([color=grey][wave amp=50 freq=2]..2..[/wave][/color])
+3 [color=green]sajikan[/color]([color=grey][wave amp=50 freq=2]..3..[/wave][/color])
+[/code]"
+text = "Objektif: Buat 1 jus apel
+
+1 Apel buah = ambilBuah(..1..)
+2 Jus jus = blender(..2..)
+3 sajikan(..3..)
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -379,32 +423,57 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -10.0
+custom_constants/separation = 7
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer"]
-margin_top = 19.0
-margin_right = 335.0
-margin_bottom = 33.0
+margin_top = 16.0
+margin_right = 249.0
+margin_bottom = 36.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 size_flags_stretch_ratio = 8.53
+custom_fonts/font = ExtResource( 6 )
 text = "Video Objektif"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer"]
-margin_left = 339.0
-margin_top = 19.0
-margin_right = 379.0
-margin_bottom = 33.0
+[node name="PlayVideoButton" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer"]
+margin_left = 256.0
+margin_top = 14.0
+margin_right = 297.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
-custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
 text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpandVideoButton" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer"]
+margin_left = 304.0
+margin_top = 14.0
+margin_right = 379.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Perbesar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -418,16 +487,35 @@ size_flags_stretch_ratio = 1.2
 custom_styles/panel = SubResource( 2 )
 
 [node name="VideoPlayer" type="VideoPlayer" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body"]
-anchor_left = 0.0776942
-anchor_right = 0.932331
+anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stream = ExtResource( 2 )
-autoplay = true
+paused = true
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
 }
 
 [connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Run" to="." method="_on_Run_pressed"]
 [connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/PlayVideoButton" to="." method="_on_PlayVideoButton_pressed"]
+[connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/ExpandVideoButton" to="." method="_on_ExpandVideoButton_pressed"]
