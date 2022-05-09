@@ -90,8 +90,6 @@ func _on_data_changed(_dropzone: Dropzone):
 				dropzone._icon.texture
 			)
 	code_textbox.bbcode_text = new_bbcode_text
-	
-	
 
 # Signals
 
