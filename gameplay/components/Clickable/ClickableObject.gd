@@ -1,4 +1,5 @@
 extends Area2D
+class_name ClickableObject
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton \

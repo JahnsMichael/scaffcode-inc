@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://_dev/jahns/Components/Interface.tscn" type="PackedScene" id=1]
-[ext_resource path="res://_dev/jahns/Scripts/Map.gd" type="Script" id=2]
+[ext_resource path="res://gameplay/components/Interfaces/Interface.tscn" type="PackedScene" id=1]
+[ext_resource path="res://gameplay/components/Maps/Map.gd" type="Script" id=2]
 [ext_resource path="res://_dev/jahns/Resources/BlueCheckerPatternPaper.png" type="Texture" id=3]
-[ext_resource path="res://_dev/jahns/Components/MousePointer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gameplay/components/MousePointer/MousePointer.tscn" type="PackedScene" id=4]
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 2 )

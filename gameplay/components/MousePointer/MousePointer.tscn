@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gameplay/components/MousePointer/MousePointer.gd" type="Script" id=1]
+[ext_resource path="res://gameplay/resources/images/icons/pointer-default.png" type="Texture" id=2]
+
+[node name="MousePointer" type="Sprite"]
+scale = Vector2( 0.481584, 0.481584 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )

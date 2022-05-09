@@ -1,4 +1,5 @@
-extends "res://_dev/jahns/Scripts/ClickableObject.gd"
+extends ClickableObject
+class_name ChangeSceneButton
 
 export(String, FILE, "*.tscn") var target_scene_path
 
