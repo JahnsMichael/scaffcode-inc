@@ -1,0 +1,69 @@
+{
+	"events": [
+		{
+			"character": "character-1648393302.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Halo, aku Friya. Aku baru pertama kali mampir ke toko ini."
+		},
+		{
+			"character": "character-1648393302.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Apakah rasa jus dari toko ini enak? Berdasarkan review online seharusnya toko ini menjadi salah satu toko jus terbaik dalam kota ini."
+		},
+		{
+			"choice": "Wah aku kurang tahu rasa dari jus toko ini. ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651491876.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aku juga baru pertama kali datang ke toko ini."
+		},
+		{
+			"character": "character-1648393302.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Baiklah jika begitu, terimakasih atas responnya."
+		},
+		{
+			"choice": "Rasa jus di sini sangat fantastik. ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651491876.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu pasti tidak akan menyesal jika mencoba nya."
+		},
+		{
+			"character": "character-1648393302.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Woah, aku jadi ingin langsung mencoba nya. Terima kasih banyak."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651311646.json",
+		"name": "Friya-Pembeli Baru"
+	}
+}
