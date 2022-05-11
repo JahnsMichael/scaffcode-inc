@@ -39,3 +39,4 @@ func drop_data(_position: Vector2, draggable: ExplorationItem) -> void:
 
 func clear():
 	$Icon.texture = state_textures[callback_state]
+

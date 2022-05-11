@@ -75,19 +75,73 @@ texture_visible = false
 randomized_drag_preview = true
 
 [node name="Blender" parent="." instance=ExtResource( 2 )]
-margin_left = 482.0
+margin_left = 72.0
 margin_top = 218.0
-margin_right = 602.0
+margin_right = 192.0
 margin_bottom = 338.0
 rect_scale = Vector2( 1.65453, 1.65453 )
 input_textures = [ null, ExtResource( 6 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 9 ) ]
 state_textures = [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
 
 [node name="Glass" parent="." instance=ExtResource( 2 )]
-margin_left = 771.0
-margin_top = 315.0
-margin_right = 891.0
-margin_bottom = 435.0
+margin_left = 280.0
+margin_top = 318.0
+margin_right = 400.0
+margin_bottom = 438.0
+rect_scale = Vector2( 0.847919, 0.847919 )
+input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
+state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="Glass2" parent="." instance=ExtResource( 2 )]
+margin_left = 382.0
+margin_top = 318.0
+margin_right = 502.0
+margin_bottom = 438.0
+rect_scale = Vector2( 0.847919, 0.847919 )
+input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
+state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="Glass3" parent="." instance=ExtResource( 2 )]
+margin_left = 488.0
+margin_top = 318.0
+margin_right = 608.0
+margin_bottom = 438.0
+rect_scale = Vector2( 0.847919, 0.847919 )
+input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
+state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="Glass4" parent="." instance=ExtResource( 2 )]
+margin_left = 590.0
+margin_top = 318.0
+margin_right = 710.0
+margin_bottom = 438.0
+rect_scale = Vector2( 0.847919, 0.847919 )
+input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
+state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="Glass5" parent="." instance=ExtResource( 2 )]
+margin_left = 698.0
+margin_top = 318.0
+margin_right = 818.0
+margin_bottom = 438.0
+rect_scale = Vector2( 0.847919, 0.847919 )
+input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
+state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="Glass6" parent="." instance=ExtResource( 2 )]
+margin_left = 800.0
+margin_top = 318.0
+margin_right = 920.0
+margin_bottom = 438.0
+rect_scale = Vector2( 0.847919, 0.847919 )
+input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
+state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="Glass7" parent="." instance=ExtResource( 2 )]
+margin_left = 906.0
+margin_top = 318.0
+margin_right = 1026.0
+margin_bottom = 438.0
 rect_scale = Vector2( 0.847919, 0.847919 )
 input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
 state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
