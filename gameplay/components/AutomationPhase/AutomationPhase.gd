@@ -14,6 +14,7 @@ onready var dropzone_container: GridContainer = $Margin/HBoxContainer/AnswerCont
 onready var code_textbox: RichTextLabel = $Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/ScrollContainer/MarginContainer/Code
 onready var video_container: VBoxContainer = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer
 onready var video_player: VideoPlayer = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/VideoPlayer
+onready var video_player_popup: VideoPlayer = $Popup/ObjectiveVideoContainer2/Body/VideoPlayer
 onready var expand_video_button: Button = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/ExpandVideoButton
 onready var third_column: VBoxContainer = $Margin/HBoxContainer/VBoxContainer
 onready var popup: Popup = $Popup
@@ -40,6 +41,13 @@ func _ready():
 	generate_spawners()
 	generate_dropzones()
 	generate_code_snippet()
+	generate_video()
+	
+func _process(delta):
+	if !video_player.is_playing():
+		video_player.play()	
+	if !video_player_popup.is_playing():
+		video_player_popup.play()
 	
 func clean_up():
 	for placeholder_spawner in spawner_container.get_children():
@@ -68,6 +76,11 @@ func generate_code_snippet():
 		
 func generate_video():
 	video_player.stream = video_stream
+	video_player.autoplay = true
+	video_player.play()
+	video_player_popup.stream = video_stream
+	video_player_popup.autoplay = true
+	video_player_popup.play()
 		
 func replace_empty(text: String, index: int):
 	var regex = RegEx.new()
