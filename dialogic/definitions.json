@@ -29,7 +29,13 @@
 		},
 		{
 			"id": "1651492607-895",
-			"name": "Pertama kali",
+			"name": "Pertama kali penjual",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1652265950-648",
+			"name": "Pertama kali advi map",
 			"type": 0,
 			"value": "0"
 		}

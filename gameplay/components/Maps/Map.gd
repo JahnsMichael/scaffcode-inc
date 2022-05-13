@@ -19,3 +19,16 @@ func _ready():
 	
 	print(boundary.position)
 	print(boundary.end)
+	start_dialog()
+	
+func start_dialog():
+	var dialog = Dialogic.start("Advi-First Time")
+	dialog.pause_mode = PAUSE_MODE_PROCESS
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	self.add_child(dialog)
+	dialog.connect("timeline_end", self, "end_dialog")
+	get_tree().paused = true
+
+func end_dialog(data):
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
