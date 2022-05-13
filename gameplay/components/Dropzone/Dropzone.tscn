@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://gameplay/components/Dropzone/Dropzone.gd" type="Script" id=1]
 [ext_resource path="res://gameplay/resources/fonts/mono.tres" type="DynamicFont" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://gameplay/resources/themes/Dropzone_Panel/Dropzone_Panel_False.tres" type="StyleBox" id=5]
 [ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=6]
 [ext_resource path="res://gameplay/resources/themes/Dropzone_ClearButton/Dropzone_ClearButton.tres" type="StyleBox" id=7]
+[ext_resource path="res://gameplay/resources/audios/sfx_pop.wav" type="AudioStream" id=8]
 
 [node name="Dropzone" type="MarginContainer" groups=["dropzone"]]
 anchor_left = 0.000976562
@@ -82,5 +83,8 @@ custom_styles/focus = ExtResource( 7 )
 custom_styles/disabled = ExtResource( 7 )
 custom_styles/normal = ExtResource( 7 )
 text = "Clear"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="pressed" from="ClearButton" to="." method="_on_ClearButton_pressed"]

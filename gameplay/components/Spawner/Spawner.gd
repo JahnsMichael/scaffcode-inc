@@ -15,4 +15,5 @@ func get_drag_data(_position: Vector2):
 	preview_texture_rect.rect_position = -0.5 * preview_texture_rect.rect_size
 	preview_control.add_child(preview_texture_rect)
 	set_drag_preview(preview_control)
+	$AudioStreamPlayer.play()
 	return self

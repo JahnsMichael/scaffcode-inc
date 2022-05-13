@@ -1,0 +1,9 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://gameplay/resources/fonts/FiraSans/FiraSans-Black.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 96
+outline_size = 12
+outline_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+font_data = ExtResource( 1 )

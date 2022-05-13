@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bgm_relax_lofi.mp3-076d236b4912db4b7d29bea5a0981c3f.mp3str"
+
+[deps]
+
+source_file="res://gameplay/resources/audios/bgm_relax_lofi.mp3"
+dest_files=[ "res://.import/bgm_relax_lofi.mp3-076d236b4912db4b7d29bea5a0981c3f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -25,6 +25,7 @@ func drop_data(_position: Vector2, draggable: MarginContainer) -> void:
 	_icon.texture = draggable.texture
 	_icon.expand = true
 	$ClearButton.visible = true
+	$AudioStreamPlayer.play()
 	emit_signal("data_changed", self)
 
 func _on_ClearButton_pressed():
@@ -34,13 +35,16 @@ func clear():
 	_icon.texture = null
 	$Panel.add_stylebox_override("panel", default_stylebox)
 	$ClearButton.visible = false
+	$AudioStreamPlayer.play()
 	emit_signal("data_changed", self)
 
-func validate():
+func validate() -> bool:
 	if _icon.texture == null:
-		return
+		return false
 		
 	if _icon.texture != answer_texture :
 		$Panel.add_stylebox_override("panel", false_stylebox)
 	else:
 		$Panel.add_stylebox_override("panel", true_stylebox)
+
+	return _icon.texture == answer_texture
