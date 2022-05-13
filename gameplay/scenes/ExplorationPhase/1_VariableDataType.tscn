@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://gameplay/resources/images/items/glass_empty.png" type="Texture" id=1]
 [ext_resource path="res://gameplay/components/ExplorationItem/ExplorationItem.tscn" type="PackedScene" id=2]
@@ -16,6 +16,10 @@
 [ext_resource path="res://gameplay/resources/images/items/fruit_avocado.png" type="Texture" id=14]
 [ext_resource path="res://gameplay/resources/images/backgrounds/bg_counter.png" type="Texture" id=15]
 [ext_resource path="res://gameplay/resources/images/items/glass_banana.png" type="Texture" id=16]
+[ext_resource path="res://gameplay/resources/audios/bgm_tropical.mp3" type="AudioStream" id=17]
+[ext_resource path="res://gameplay/components/ExplorationPhase/ExplorationInterface.tscn" type="PackedScene" id=18]
+[ext_resource path="res://gameplay/scenes/AutomationPhase/1_VariableDataType_1.tscn" type="PackedScene" id=19]
+[ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=20]
 
 [node name="ExplorationPhase" type="Node2D"]
 
@@ -82,3 +86,30 @@ margin_bottom = 435.0
 rect_scale = Vector2( 0.847919, 0.847919 )
 input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ]
 state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -10.0
+autoplay = true
+
+[node name="Interface" parent="." instance=ExtResource( 18 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+next_scene = ExtResource( 19 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 377.0
+margin_top = 53.0
+margin_right = 658.0
+margin_bottom = 111.0
+custom_fonts/normal_font = ExtResource( 20 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=10 freq=2]Klik dan tarik buah ke blender, lalu klik dan tarik blender ke gelas[/wave][/center]"
+text = "Klik dan tarik buah ke blender, lalu klik dan tarik blender ke gelas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
