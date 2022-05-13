@@ -89,6 +89,13 @@
 			"event_id": "dialogic_041"
 		},
 		{
+			"choice": "Beri aku waktu untuk memikirkannya.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
 			"event_id": "dialogic_013"
 		},
 		{
