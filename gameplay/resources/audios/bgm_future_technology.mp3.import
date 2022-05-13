@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bgm_future_technology.mp3-861e4a91287da29c6641e42990e0fd35.mp3str"
+
+[deps]
+
+source_file="res://gameplay/resources/audios/bgm_future_technology.mp3"
+dest_files=[ "res://.import/bgm_future_technology.mp3-861e4a91287da29c6641e42990e0fd35.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
