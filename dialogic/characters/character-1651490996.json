@@ -13,7 +13,7 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://gameplay/resources/images/characters/advi.png"
 		}
 	],
 	"scale": 100,
