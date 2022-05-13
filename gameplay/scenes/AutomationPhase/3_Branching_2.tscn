@@ -19,3 +19,4 @@ bbcode_code_snippet = "[b]Objektif[/b]: Cek kualitas buah sebelum membuat jus
 7 }
 [/code]"
 video_stream = ExtResource( 5 )
+dialog_name = "Advi-Percabangan Done"

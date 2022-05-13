@@ -17,3 +17,4 @@ bbcode_code_snippet = "[b]Objektif[/b]: Buat 1 jus Alpukat
 3 [color=green]sajikan[/color](@5)
 [/code]"
 video_stream = ExtResource( 7 )
+dialog_name = "Advi-Variabel Done"

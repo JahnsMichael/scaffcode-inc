@@ -6,6 +6,7 @@ export(Array, Texture) var answers_texture
 export(String, MULTILINE) var bbcode_code_snippet
 export(VideoStreamWebm) var video_stream
 export(PackedScene) var next_scene
+export(String) var dialog_name
 
 # References
 onready var spawner_container: GridContainer = $Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer/MarginContainer/GridContainer
@@ -94,6 +95,21 @@ func _on_data_changed(_dropzone: Dropzone):
 				dropzone._icon.texture
 			)
 	code_textbox.bbcode_text = new_bbcode_text
+
+func dialog():
+	if !dialog_name:
+		return
+		
+	var dialog = Dialogic.start(dialog_name)
+	dialog.pause_mode = PAUSE_MODE_PROCESS
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_parent().add_child(dialog)
+	dialog.connect("timeline_end", self, "end_dialog")
+	get_tree().paused = true
+	
+func end_dialog(data):
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 # Signals
 

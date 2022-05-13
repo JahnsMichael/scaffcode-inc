@@ -15,3 +15,4 @@ bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 pisang ke dalam kotak pisang
 2 kotakPisang[color=green]@2[/color](@3, @4)
 [/code]"
 video_stream = ExtResource( 6 )
+dialog_name = "Advi-Koleksi Done"

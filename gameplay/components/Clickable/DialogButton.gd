@@ -2,6 +2,11 @@ extends ClickableObject
 class_name DialogButton
 
 export(String) var dialog_name
+export(Texture) var texture
+
+func _ready():
+	if texture:
+		$Sprite.texture = texture
 
 func on_click():
 	var dialog = Dialogic.start(dialog_name)
