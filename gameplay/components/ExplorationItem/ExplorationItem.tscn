@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://gameplay/components/ExplorationItem/ExplorationItem.gd" type="Script" id=2]
-[ext_resource path="res://gameplay/resources/images/icons/x-button.png" type="Texture" id=3]
+[ext_resource path="res://gameplay/resources/audios/sfx_zip.wav" type="AudioStream" id=3]
+[ext_resource path="res://gameplay/resources/audios/sfx_pop.wav" type="AudioStream" id=4]
 
 [node name="ExplorationItem" type="MarginContainer" groups=["dropzone"]]
 anchor_right = 0.117188
@@ -27,28 +28,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 100.0
-margin_bottom = 100.0
-mouse_filter = 2
-custom_constants/margin_right = 35
-custom_constants/margin_top = 35
-custom_constants/margin_left = 35
-custom_constants/margin_bottom = 35
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="DragAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
-[node name="XIcon" type="TextureRect" parent="MarginContainer"]
-visible = false
-margin_left = 35.0
-margin_top = 35.0
-margin_right = 65.0
-margin_bottom = 65.0
-mouse_filter = 2
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="DropAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

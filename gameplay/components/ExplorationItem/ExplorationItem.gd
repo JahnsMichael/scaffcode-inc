@@ -26,6 +26,7 @@ func get_drag_data(_position: Vector2):
 	preview_texture_rect.rect_position = -0.5 * preview_texture_rect.rect_size
 	preview_control.add_child(preview_texture_rect)
 	set_drag_preview(preview_control)
+	$DragAudioStreamPlayer.play()
 	return self
 
 func can_drop_data(_position: Vector2, draggable: ExplorationItem) -> bool:
@@ -36,6 +37,7 @@ func drop_data(_position: Vector2, draggable: ExplorationItem) -> void:
 	$Icon.expand = true
 	texture = $Icon.texture
 	draggable.clear()
+	$DropAudioStreamPlayer.play()
 
 func clear():
 	$Icon.texture = state_textures[callback_state]
