@@ -1,0 +1,198 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://gameplay/components/ExplorationItem/ExplorationItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://gameplay/resources/images/items/crate_orange.png" type="Texture" id=2]
+[ext_resource path="res://gameplay/resources/images/backgrounds/bg_green_wall.png" type="Texture" id=3]
+[ext_resource path="res://gameplay/resources/images/items/group_apple.png" type="Texture" id=4]
+[ext_resource path="res://gameplay/resources/images/items/group_orange.png" type="Texture" id=5]
+[ext_resource path="res://gameplay/resources/images/items/crate_empty.png" type="Texture" id=6]
+[ext_resource path="res://gameplay/resources/images/backgrounds/bg_counter_empty.png" type="Texture" id=7]
+[ext_resource path="res://gameplay/resources/images/items/crate_avocado.png" type="Texture" id=8]
+[ext_resource path="res://gameplay/resources/images/items/crate_banana.png" type="Texture" id=9]
+[ext_resource path="res://gameplay/resources/images/items/crate_apple.png" type="Texture" id=10]
+[ext_resource path="res://gameplay/resources/images/items/group_banana.png" type="Texture" id=11]
+[ext_resource path="res://gameplay/resources/images/items/group_avocado.png" type="Texture" id=12]
+[ext_resource path="res://gameplay/resources/audios/bgm_tropical.mp3" type="AudioStream" id=13]
+[ext_resource path="res://gameplay/scenes/AutomationPhase/2_Collection_1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://gameplay/components/ExplorationPhase/ExplorationInterface.tscn" type="PackedScene" id=15]
+[ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=16]
+[ext_resource path="res://gameplay/components/DontPause.gd" type="Script" id=17]
+
+[node name="ExplorationPhase" type="Node2D"]
+script = ExtResource( 17 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisplayApple" parent="." instance=ExtResource( 1 )]
+margin_left = 112.0
+margin_top = 80.0
+margin_right = 212.0
+margin_bottom = 180.0
+rect_scale = Vector2( 2.34107, 2.34107 )
+input_textures = [ null, ExtResource( 10 ) ]
+state_textures = [ null, ExtResource( 4 ) ]
+
+[node name="DisplayOrange" parent="." instance=ExtResource( 1 )]
+margin_left = 296.0
+margin_top = 48.0
+margin_right = 396.0
+margin_bottom = 148.0
+rect_scale = Vector2( 2.71495, 2.67025 )
+input_textures = [ null, ExtResource( 2 ) ]
+state_textures = [ null, ExtResource( 5 ) ]
+
+[node name="DisplayAvocado" parent="." instance=ExtResource( 1 )]
+margin_left = 520.0
+margin_top = 40.0
+margin_right = 620.0
+margin_bottom = 140.0
+rect_scale = Vector2( 2.88113, 2.8575 )
+input_textures = [ null, ExtResource( 8 ) ]
+state_textures = [ null, ExtResource( 12 ) ]
+
+[node name="DisplayBanana" parent="." instance=ExtResource( 1 )]
+margin_left = 728.0
+margin_top = 72.0
+margin_right = 828.0
+margin_bottom = 172.0
+rect_scale = Vector2( 2.30342, 2.29521 )
+input_textures = [ null, ExtResource( 9 ) ]
+state_textures = [ null, ExtResource( 11 ) ]
+
+[node name="Counter" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.999085, 0.999085 )
+mouse_filter = 2
+texture = ExtResource( 7 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrateApple" parent="." instance=ExtResource( 1 )]
+margin_left = 112.0
+margin_top = 376.0
+margin_right = 212.0
+margin_bottom = 476.0
+rect_scale = Vector2( 2.06638, 2.06638 )
+input_textures = [ ExtResource( 4 ) ]
+state_textures = [ ExtResource( 10 ), ExtResource( 6 ) ]
+callback_state = 1
+
+[node name="CrateOrange" parent="." instance=ExtResource( 1 )]
+margin_left = 320.0
+margin_top = 376.0
+margin_right = 420.0
+margin_bottom = 476.0
+rect_scale = Vector2( 2.06638, 2.06638 )
+input_textures = [ ExtResource( 5 ) ]
+state_textures = [ ExtResource( 2 ), ExtResource( 6 ) ]
+callback_state = 1
+
+[node name="CrateAvocado" parent="." instance=ExtResource( 1 )]
+margin_left = 528.0
+margin_top = 376.0
+margin_right = 628.0
+margin_bottom = 476.0
+rect_scale = Vector2( 2.06638, 2.06638 )
+input_textures = [ ExtResource( 12 ) ]
+state_textures = [ ExtResource( 8 ), ExtResource( 6 ) ]
+callback_state = 1
+
+[node name="CrateBanana" parent="." instance=ExtResource( 1 )]
+margin_left = 736.0
+margin_top = 376.0
+margin_right = 836.0
+margin_bottom = 476.0
+rect_scale = Vector2( 2.06638, 2.06638 )
+input_textures = [ ExtResource( 11 ) ]
+state_textures = [ ExtResource( 9 ), ExtResource( 6 ) ]
+callback_state = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -10.0
+autoplay = true
+
+[node name="Interface" parent="." instance=ExtResource( 15 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+next_scene = ExtResource( 14 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 376.0
+margin_top = 64.0
+margin_right = 720.0
+margin_bottom = 91.0
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=10 freq=2]Susun buah-buahan ke tempat yang sesuai[/wave][/center]"
+text = "Susun buah-buahan ke tempat yang sesuai"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 184.0
+margin_top = 272.0
+margin_right = 240.0
+margin_bottom = 299.0
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=10 freq=2]Apel[/wave][/center]"
+text = "Apel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 400.0
+margin_top = 272.0
+margin_right = 456.0
+margin_bottom = 299.0
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=10 freq=2]Jeruk[/wave][/center]"
+text = "Jeruk"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+margin_left = 624.0
+margin_top = 272.0
+margin_right = 680.0
+margin_bottom = 299.0
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=10 freq=2]Alpukat[/wave][/center]"
+text = "Alpukat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+margin_left = 816.0
+margin_top = 272.0
+margin_right = 872.0
+margin_bottom = 299.0
+custom_fonts/normal_font = ExtResource( 16 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=10 freq=2]Pisang[/wave][/center]"
+text = "Pisang"
+__meta__ = {
+"_edit_use_anchors_": false
+}

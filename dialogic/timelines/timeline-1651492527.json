@@ -52,7 +52,7 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "",
+			"change_scene": "res://gameplay/scenes/ExplorationPhase/1_VariableDataType.tscn",
 			"event_id": "dialogic_041"
 		},
 		{
@@ -63,7 +63,7 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "",
+			"change_scene": "res://gameplay/scenes/ExplorationPhase/2_Collection.tscn",
 			"event_id": "dialogic_041"
 		},
 		{
@@ -74,7 +74,7 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "",
+			"change_scene": "res://gameplay/scenes/ExplorationPhase/3_Branching.tscn",
 			"event_id": "dialogic_041"
 		},
 		{
@@ -85,7 +85,7 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "",
+			"change_scene": "res://gameplay/scenes/ExplorationPhase/4_Loop.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

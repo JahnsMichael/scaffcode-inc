@@ -1,18 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gameplay/resources/images/items/fruit_apple.png" type="Texture" id=2]
 [ext_resource path="res://gameplay/resources/images/texts/var_buah.png" type="Texture" id=3]
+[ext_resource path="res://gameplay/scenes/AutomationPhase/3_Branching_2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gameplay/resources/videos/3_Branching.webm" type="VideoStream" id=5]
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 2 ), ExtResource( 3 ) ]
 bbcode_code_snippet = "[b]Objektif[/b]: Cek kualitas buah sebelum membuat jus
 [code]
 1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color](@1)
-2 [color=blue]if[/color] (@2 [color=#f99602]==[/color] spriteBuah) {
-3    [color=green]buang[/color](buah)
+2 [color=blue]if[/color] (@2 [color=#f99602]==[/color] [img=40]res://gameplay/resources/images/items/badfruit_apple.png[/img]) {
+3     [color=green]buang[/color](buah)
 4 } [color=blue]else[/color] {
 5     [color=red]Jus[/color] jus = [color=green]blender[/color](buah)
 6     [color=green]sajikan[/color](jus)
 7 }
 [/code]"
+video_stream = ExtResource( 5 )
+next_scene = ExtResource( 4 )

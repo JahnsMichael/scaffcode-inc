@@ -5,17 +5,19 @@ export(Array, Texture) var spawners_texture
 export(Array, Texture) var answers_texture
 export(String, MULTILINE) var bbcode_code_snippet
 export(VideoStreamWebm) var video_stream
+export(PackedScene) var next_scene
+export(String) var dialog_name
 
 # References
 onready var spawner_container: GridContainer = $Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer/MarginContainer/GridContainer
 onready var dropzone_container: GridContainer = $Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer
-onready var code_textbox: RichTextLabel = $Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/MarginContainer/Code
+onready var code_textbox: RichTextLabel = $Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/ScrollContainer/MarginContainer/Code
 onready var video_container: VBoxContainer = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer
 onready var video_player: VideoPlayer = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/VideoPlayer
-onready var play_video_button: Button = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/PlayVideoButton
 onready var expand_video_button: Button = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/ExpandVideoButton
 onready var third_column: VBoxContainer = $Margin/HBoxContainer/VBoxContainer
 onready var popup: Popup = $Popup
+onready var next_button: Button = $Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Next
 
 # Preloads
 var dropzone_scene = preload("res://gameplay/components/Dropzone/Dropzone.tscn")
@@ -32,6 +34,7 @@ var video_expanded = false
 
 func _ready():
 	get_tree().paused = false
+	$AudioStreamPlayer.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	clean_up()
 	generate_spawners()
@@ -93,6 +96,21 @@ func _on_data_changed(_dropzone: Dropzone):
 			)
 	code_textbox.bbcode_text = new_bbcode_text
 
+func dialog():
+	if !dialog_name:
+		return
+		
+	var dialog = Dialogic.start(dialog_name)
+	dialog.pause_mode = PAUSE_MODE_PROCESS
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_parent().add_child(dialog)
+	dialog.connect("timeline_end", self, "end_dialog")
+	get_tree().paused = true
+	
+func end_dialog(data):
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
 # Signals
 
 func _on_Reset_pressed():
@@ -100,26 +118,22 @@ func _on_Reset_pressed():
 		dropzone.clear()
 
 func _on_Run_pressed():
+	var all_true = true
 	for dropzone in dropzone_container.get_children():
-		dropzone.validate()
-
-func _on_PlayVideoButton_pressed():
-	if video_player.paused:
-		play_video_button.text = "Pause"
-		video_player.play()
+		all_true = dropzone.validate() && all_true
+	if all_true:
+		next_button.visible = true
 	else:
-		play_video_button.text = "Play"
-	video_player.paused = !video_player.paused
+		next_button.visible = false
 
 func _on_ExpandVideoButton_pressed():
 	if !video_expanded:
-		third_column.remove_child(video_container)
-		popup.get_child(0).add_child(video_container)
 		popup.popup()
-		expand_video_button.text = "Perkecil"
 	else:
-		popup.get_child(0).remove_child(video_container)
-		third_column.add_child(video_container)
 		popup.hide()
-		expand_video_button.text = "Perbesar"
 	video_expanded = !video_expanded
+
+func _on_Next_pressed():
+	var error = get_tree().change_scene_to(next_scene)
+	if error:
+		print(error)
