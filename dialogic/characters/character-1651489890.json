@@ -13,7 +13,7 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://gameplay/resources/images/characters/juice_merchant.png"
 		}
 	],
 	"scale": 100,
