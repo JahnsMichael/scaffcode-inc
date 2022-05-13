@@ -42,25 +42,25 @@ func _ready():
 	generate_dropzones()
 	generate_code_snippet()
 	generate_video()
-	
+
 func _process(delta):
 	if !video_player.is_playing():
-		video_player.play()	
+		video_player.play()
 	if !video_player_popup.is_playing():
 		video_player_popup.play()
-	
+
 func clean_up():
 	for placeholder_spawner in spawner_container.get_children():
 		placeholder_spawner.queue_free()
 	for placeholder_dropzone in dropzone_container.get_children():
-		placeholder_dropzone.queue_free()	
+		placeholder_dropzone.queue_free()
 
 func generate_spawners():
 	for texture in spawners_texture:
 		var spawner = spawner_scene.instance()
 		spawner.texture = texture
 		spawner_container.add_child(spawner)
-		
+
 func generate_dropzones():
 	for i in len(answers_texture):
 		var dropzone = dropzone_scene.instance()
@@ -73,7 +73,7 @@ func generate_code_snippet():
 	code_textbox.bbcode_text = bbcode_code_snippet
 	for i in len(answers_texture):
 		code_textbox.bbcode_text = replace_empty(code_textbox.bbcode_text, i+1)
-		
+
 func generate_video():
 	video_player.stream = video_stream
 	video_player.autoplay = true
@@ -81,12 +81,12 @@ func generate_video():
 	video_player_popup.stream = video_stream
 	video_player_popup.autoplay = true
 	video_player_popup.play()
-		
+
 func replace_empty(text: String, index: int):
 	var regex = RegEx.new()
 	regex.compile("@%s" % index)
 	return regex.sub(text, empty_answer_bbcode_template % index)
-	
+
 func replace_filled(text: String, index: int, texture: Texture):
 	var regex = RegEx.new()
 	regex.compile("@%s" % index)
@@ -98,13 +98,13 @@ func _on_data_changed(_dropzone: Dropzone):
 	for dropzone in dropzone_container.get_children():
 		if dropzone._icon.texture == null:
 			new_bbcode_text = replace_empty(
-				new_bbcode_text, 
+				new_bbcode_text,
 				dropzone.label_num
 			)
 		else:
 			new_bbcode_text = replace_filled(
-				new_bbcode_text, 
-				dropzone.label_num, 
+				new_bbcode_text,
+				dropzone.label_num,
 				dropzone._icon.texture
 			)
 	code_textbox.bbcode_text = new_bbcode_text
@@ -112,14 +112,14 @@ func _on_data_changed(_dropzone: Dropzone):
 func dialog():
 	if !dialog_name:
 		return
-		
+
 	var dialog = Dialogic.start(dialog_name)
 	dialog.pause_mode = PAUSE_MODE_PROCESS
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_parent().add_child(dialog)
 	dialog.connect("timeline_end", self, "end_dialog")
 	get_tree().paused = true
-	
+
 func end_dialog(data):
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
