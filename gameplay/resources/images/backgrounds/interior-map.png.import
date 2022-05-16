@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/interior-map.png-f785d51af225716dba014064ad3693c8.stex"
+path="res://.import/interior-map.png-20b560133abd2adebcb88192bbaf403b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_dev/jahns/Resources/interior-map.png"
-dest_files=[ "res://.import/interior-map.png-f785d51af225716dba014064ad3693c8.stex" ]
+source_file="res://gameplay/resources/images/backgrounds/interior-map.png"
+dest_files=[ "res://.import/interior-map.png-20b560133abd2adebcb88192bbaf403b.stex" ]
 
 [params]
 

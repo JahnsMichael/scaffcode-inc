@@ -74,11 +74,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 }, {
-"base": "Area2D",
-"class": "Draggable",
-"language": "GDScript",
-"path": "res://_dev/primo/Scripts/level/Draggable.gd"
-}, {
 "base": "MarginContainer",
 "class": "Dropzone",
 "language": "GDScript",
@@ -98,11 +93,6 @@ _global_script_classes=[ {
 "class": "Spawner",
 "language": "GDScript",
 "path": "res://gameplay/components/Spawner/Spawner.gd"
-}, {
-"base": "Position2D",
-"class": "Trashzone",
-"language": "GDScript",
-"path": "res://_dev/primo/Scripts/level/Trashzone.gd"
 } ]
 _global_script_class_icons={
 "ChangeSceneButton": "",
@@ -118,12 +108,10 @@ _global_script_class_icons={
 "DialogicParser": "",
 "DialogicResources": "",
 "DialogicUtil": "",
-"Draggable": "",
 "Dropzone": "",
 "ExplorationItem": "",
 "HistoryRow": "",
-"Spawner": "",
-"Trashzone": ""
+"Spawner": ""
 }
 
 [application]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BlueCheckerPatternPaper.png-b31f2e39ef65a15807be41541fce2f6c.stex"
+path="res://.import/exclamation-mark.png-7b4e5182bb75120ae88e1b464e3d13b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_dev/jahns/Resources/BlueCheckerPatternPaper.png"
-dest_files=[ "res://.import/BlueCheckerPatternPaper.png-b31f2e39ef65a15807be41541fce2f6c.stex" ]
+source_file="res://gameplay/resources/images/icons/exclamation-mark.png"
+dest_files=[ "res://.import/exclamation-mark.png-7b4e5182bb75120ae88e1b464e3d13b5.stex" ]
 
 [params]
 
