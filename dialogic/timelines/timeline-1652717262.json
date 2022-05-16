@@ -1,0 +1,43 @@
+{
+	"events": [
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Apakah anda ingin kembali ke main menu? (Progress anda tersimpan selama anda tidak keluar dari game ini)"
+		},
+		{
+			"choice": "Ya",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "out",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Tidak",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652717262.json",
+		"name": "Out"
+	}
+}

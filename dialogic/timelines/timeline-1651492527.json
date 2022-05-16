@@ -45,6 +45,76 @@
 			"text": "Kau memiliki muka yang mirip, layaknya orang tua dan anak HAHAHAHA."
 		},
 		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Mirror",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hai Lemi! Apa kabarmu? Sudah lama ya kita tidak bertemu."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wah lihat siapa ini? Si ahli komputer Advi rupanya. Aku sudah menunggumu untuk membantuku membuat sistem automasi pembuatan jus di tempat ini."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tenang saja, kami akan membantu. Kali ini aku datang dengan Mika sekaligus mengajarkannya cara memprogram Scaffbot."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mantap! Kalau begitu, langsung saja eksekusi!"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ada 4 hal yang mungkin bisa di automasi, membuat jus satuan, menyusun buah ke display buah, menyortir buah yang busuk sebelum  membuat jus, dan juga membuat jus dalam jumlah besar."
+		},
+		{
 			"definition": "1651492607-895",
 			"event_id": "dialogic_014",
 			"operation": "=",
@@ -62,10 +132,10 @@
 
 			],
 			"portrait": "",
-			"question": "Apakah kau bisa membantu ku? Aku sedang ingin melakukan automasi untuk toko ku ini. Bisakah kau membantuku dalam topik-topik ini?"
+			"question": "Bagian mana kali ini yang ingin di automasi?"
 		},
 		{
-			"choice": "Variabel dan Tipe Data",
+			"choice": "Membuat jus buah satuan (Variabel dan Tipe Data)",
 			"condition": "",
 			"definition": "1651492607-895",
 			"event_id": "dialogic_011",
@@ -76,7 +146,7 @@
 			"event_id": "dialogic_040"
 		},
 		{
-			"choice": "Tipe Data Koleksi",
+			"choice": "Menyusun buah ke display (Tipe Data Koleksi)",
 			"condition": "",
 			"definition": "1651492546-695",
 			"event_id": "dialogic_011",
@@ -87,7 +157,7 @@
 			"event_id": "dialogic_040"
 		},
 		{
-			"choice": "Percabangan/Kondisi",
+			"choice": "Memeriksa kualitas buah (Percabangan/Kondisi)",
 			"condition": "",
 			"definition": "1651492553-497",
 			"event_id": "dialogic_011",
@@ -98,7 +168,7 @@
 			"event_id": "dialogic_040"
 		},
 		{
-			"choice": "Perulangan/Iterasi",
+			"choice": "Membuat jus dalam jumlah banyak (Perulangan/Iterasi)",
 			"condition": "",
 			"definition": "1651492562-861",
 			"event_id": "dialogic_011",
