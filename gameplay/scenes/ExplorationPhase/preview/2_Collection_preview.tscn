@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://gameplay/components/ExplorationItem/ExplorationItem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gameplay/resources/images/items/crate_orange.png" type="Texture" id=2]
@@ -13,11 +13,9 @@
 [ext_resource path="res://gameplay/resources/images/items/group_banana.png" type="Texture" id=11]
 [ext_resource path="res://gameplay/resources/images/items/group_avocado.png" type="Texture" id=12]
 [ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=16]
-[ext_resource path="res://gameplay/components/DontPause.gd" type="Script" id=17]
 
 [node name="ExplorationPhase" type="Node2D"]
 pause_mode = 2
-script = ExtResource( 17 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 40.0
