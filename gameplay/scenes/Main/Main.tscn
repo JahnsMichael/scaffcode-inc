@@ -5,7 +5,7 @@
 [ext_resource path="res://gameplay/resources/fonts/title.tres" type="DynamicFont" id=3]
 [ext_resource path="res://gameplay/scenes/Main/Main.gd" type="Script" id=4]
 [ext_resource path="res://gameplay/resources/themes/MainMenu/MainMenu_Button.tres" type="StyleBox" id=5]
-[ext_resource path="res://gameplay/scenes/Maps/JuiceBar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gameplay/scenes/Storyboard/Storyboard.tscn" type="PackedScene" id=6]
 [ext_resource path="res://gameplay/resources/audios/bgm_tropical.mp3" type="AudioStream" id=7]
 
 [node name="Main" type="Control"]
