@@ -4,7 +4,7 @@
 [ext_resource path="res://gameplay/resources/images/texts/var_10.png" type="Texture" id=2]
 [ext_resource path="res://gameplay/resources/images/items/fruit_apple.png" type="Texture" id=3]
 [ext_resource path="res://gameplay/scenes/AutomationPhase/2_Collection_2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://gameplay/resources/videos/2_Collection_1.webm" type="VideoStream" id=5]
+[ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/2_Collection_preview.tscn" type="PackedScene" id=5]
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 3 ), ExtResource( 2 ) ]
@@ -13,5 +13,5 @@ bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 apel ke dalam kotak apel
 1 [color=red]Apel[/color][] kotakApel = [color=red]Apel[/color][10]()
 2 kotakApel[color=green].tambah[/color](@1, @2)
 [/code]"
-video_stream = ExtResource( 5 )
+exploration_preview_scene = ExtResource( 5 )
 next_scene = ExtResource( 4 )

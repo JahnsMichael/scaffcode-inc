@@ -17,8 +17,7 @@ func _ready():
 	$MousePointer/Camera2D.set_limit(2, boundary.end.x)
 	$MousePointer/Camera2D.set_limit(3, boundary.end.y)
 	
-	print(boundary.position)
-	print(boundary.end)
+	yield(SceneChanger, "scene_changed")
 	start_dialog()
 	
 func start_dialog():

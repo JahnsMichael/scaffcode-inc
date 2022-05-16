@@ -5,7 +5,7 @@
 [ext_resource path="res://gameplay/resources/images/items/fruit_banana.png" type="Texture" id=3]
 [ext_resource path="res://gameplay/resources/images/texts/func_tambah.png" type="Texture" id=4]
 [ext_resource path="res://gameplay/resources/images/texts/type_Pisang.png" type="Texture" id=5]
-[ext_resource path="res://gameplay/resources/videos/2_Collection_2.webm" type="VideoStream" id=6]
+[ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/2_Collection_preview.tscn" type="PackedScene" id=6]
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ]
@@ -14,5 +14,5 @@ bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 pisang ke dalam kotak pisang
 1 @1[] kotakPisang = [color=red]Apel[/color][10]()
 2 kotakPisang[color=green]@2[/color](@3, @4)
 [/code]"
-video_stream = ExtResource( 6 )
+exploration_preview_scene = ExtResource( 6 )
 dialog_name = "Advi-Koleksi Done"

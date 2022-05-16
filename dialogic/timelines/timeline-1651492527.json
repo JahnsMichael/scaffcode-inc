@@ -72,8 +72,8 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "res://gameplay/scenes/ExplorationPhase/1_VariableDataType.tscn",
-			"event_id": "dialogic_041"
+			"emit_signal": "1",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Tipe Data Koleksi",
@@ -83,8 +83,8 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "res://gameplay/scenes/ExplorationPhase/2_Collection.tscn",
-			"event_id": "dialogic_041"
+			"emit_signal": "2",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Percabangan/Kondisi",
@@ -94,8 +94,8 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "res://gameplay/scenes/ExplorationPhase/3_Branching.tscn",
-			"event_id": "dialogic_041"
+			"emit_signal": "3",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Perulangan/Iterasi",
@@ -105,8 +105,8 @@
 			"value": "1"
 		},
 		{
-			"change_scene": "res://gameplay/scenes/ExplorationPhase/4_Loop.tscn",
-			"event_id": "dialogic_041"
+			"emit_signal": "4",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Beri aku waktu untuk memikirkannya.",

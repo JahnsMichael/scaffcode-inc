@@ -8,7 +8,7 @@ export(StyleBoxFlat) var true_stylebox
 export(StyleBoxFlat) var false_stylebox
 export var label_num = 1
 
-onready var _icon = $Icon
+onready var _icon = $MarginContainer/Icon
 var bbcode_template = "[center][color=grey][wave amp=50 freq=2]..%s..[/wave][/color][/center]"
 signal data_changed
 

@@ -4,7 +4,7 @@ extends Control
 export(Array, Texture) var spawners_texture
 export(Array, Texture) var answers_texture
 export(String, MULTILINE) var bbcode_code_snippet
-export(VideoStreamWebm) var video_stream
+export(PackedScene) var exploration_preview_scene
 export(PackedScene) var next_scene
 export(String) var dialog_name
 
@@ -13,8 +13,8 @@ onready var spawner_container: GridContainer = $Margin/HBoxContainer/ChoicesCont
 onready var dropzone_container: GridContainer = $Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer
 onready var code_textbox: RichTextLabel = $Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/ScrollContainer/MarginContainer/Code
 onready var video_container: VBoxContainer = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer
-onready var video_player: VideoPlayer = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/VideoPlayer
-onready var video_player_popup: VideoPlayer = $Popup/ObjectiveVideoContainer2/Body/VideoPlayer
+onready var exploration_viewport: Viewport = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/ViewportContainer/Viewport
+onready var exploration_viewport_popup: Viewport = $Popup/ObjectiveVideoContainer2/Body/ViewportContainer/Viewport
 onready var expand_video_button: Button = $Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/ExpandVideoButton
 onready var third_column: VBoxContainer = $Margin/HBoxContainer/VBoxContainer
 onready var popup: Popup = $Popup
@@ -37,31 +37,23 @@ func _ready():
 	get_tree().paused = false
 	$AudioStreamPlayer.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	clean_up()
 	generate_spawners()
 	generate_dropzones()
 	generate_code_snippet()
-	generate_video()
-
-func _process(delta):
-	if !video_player.is_playing():
-		video_player.play()
-	if !video_player_popup.is_playing():
-		video_player_popup.play()
-
-func clean_up():
-	for placeholder_spawner in spawner_container.get_children():
-		placeholder_spawner.queue_free()
-	for placeholder_dropzone in dropzone_container.get_children():
-		placeholder_dropzone.queue_free()
+	generate_viewports()
 
 func generate_spawners():
+	for placeholder_spawner in spawner_container.get_children():
+		placeholder_spawner.queue_free()
 	for texture in spawners_texture:
 		var spawner = spawner_scene.instance()
 		spawner.texture = texture
+#		spawner.adjust_texture_margin()
 		spawner_container.add_child(spawner)
 
 func generate_dropzones():
+	for placeholder_dropzone in dropzone_container.get_children():
+		placeholder_dropzone.queue_free()
 	for i in len(answers_texture):
 		var dropzone = dropzone_scene.instance()
 		dropzone.label_num = i + 1
@@ -74,13 +66,15 @@ func generate_code_snippet():
 	for i in len(answers_texture):
 		code_textbox.bbcode_text = replace_empty(code_textbox.bbcode_text, i+1)
 
-func generate_video():
-	video_player.stream = video_stream
-	video_player.autoplay = true
-	video_player.play()
-	video_player_popup.stream = video_stream
-	video_player_popup.autoplay = true
-	video_player_popup.play()
+func generate_viewports():
+	exploration_viewport.get_child(0).queue_free()
+	exploration_viewport_popup.get_child(0).queue_free()
+	var exploration_viewport_popup_child = exploration_preview_scene.instance()
+	var exploration_viewport_child = exploration_viewport_popup_child.duplicate()
+	exploration_viewport_child.scale = Vector2(0.4, 0.4)
+	exploration_viewport.add_child(exploration_viewport_child)
+	exploration_viewport_popup.add_child(exploration_viewport_popup_child)
+	exploration_viewport_popup.gui_disable_input = true
 
 func replace_empty(text: String, index: int):
 	var regex = RegEx.new()
@@ -90,7 +84,7 @@ func replace_empty(text: String, index: int):
 func replace_filled(text: String, index: int, texture: Texture):
 	var regex = RegEx.new()
 	regex.compile("@%s" % index)
-	var width = float(40*texture.get_width()) / texture.get_height()
+	var width = float(15*texture.get_width()) / texture.get_height()
 	return regex.sub(text, filled_answer_bbcode_template % [width ,texture.resource_path])
 
 func _on_data_changed(_dropzone: Dropzone):
@@ -115,14 +109,12 @@ func dialog():
 
 	var dialog = Dialogic.start(dialog_name)
 	dialog.pause_mode = PAUSE_MODE_PROCESS
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_parent().add_child(dialog)
 	dialog.connect("timeline_end", self, "end_dialog")
 	get_tree().paused = true
 
 func end_dialog(data):
 	get_tree().paused = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 # Signals
 
@@ -135,6 +127,7 @@ func _on_Run_pressed():
 	for dropzone in dropzone_container.get_children():
 		all_true = dropzone.validate() && all_true
 	if all_true:
+		dialog()
 		next_button.visible = true
 	else:
 		next_button.visible = false
@@ -142,11 +135,11 @@ func _on_Run_pressed():
 func _on_ExpandVideoButton_pressed():
 	if !video_expanded:
 		popup.popup()
+		exploration_viewport_popup.gui_disable_input = false
 	else:
 		popup.hide()
+		exploration_viewport_popup.gui_disable_input = true
 	video_expanded = !video_expanded
 
 func _on_Next_pressed():
-	var error = get_tree().change_scene_to(next_scene)
-	if error:
-		print(error)
+	SceneChanger.change_scene_to(next_scene)

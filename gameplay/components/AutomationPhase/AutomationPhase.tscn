@@ -1,7 +1,6 @@
 [gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.gd" type="Script" id=1]
-[ext_resource path="res://_dev/jahns/Resources/video_example.webm" type="VideoStream" id=2]
 [ext_resource path="res://gameplay/components/Dropzone/Dropzone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://gameplay/resources/images/backgrounds/level-background.jpg" type="Texture" id=4]
 [ext_resource path="res://gameplay/components/Spawner/Spawner.tscn" type="PackedScene" id=5]
@@ -48,6 +47,7 @@
 [ext_resource path="res://gameplay/scenes/Maps/JuiceBar.tscn" type="PackedScene" id=46]
 [ext_resource path="res://gameplay/resources/images/texts/var_9.png" type="Texture" id=47]
 [ext_resource path="res://gameplay/resources/images/texts/var_1.png" type="Texture" id=48]
+[ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/1_VariableDataType_preview.tscn" type="PackedScene" id=49]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -60,7 +60,7 @@ bg_color = Color( 1, 1, 1, 0.74902 )
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 
-[node name="AutomationPhase2" type="Control"]
+[node name="AutomationPhase" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -76,7 +76,7 @@ bbcode_code_snippet = "[b]Objektif[/b]: Buat 1 jus apel
 2 [color=red]Jus[/color] jus = [color=green]blender[/color](@2)
 3 [color=green]sajikan[/color](@3)
 [/code]"
-video_stream = ExtResource( 2 )
+exploration_preview_scene = ExtResource( 49 )
 next_scene = ExtResource( 46 )
 
 [node name="Background" type="TextureRect" parent="."]
@@ -237,45 +237,21 @@ size_flags_vertical = 3
 columns = 2
 
 [node name="Dropzone" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 120.0
-margin_bottom = 120.0
 answer_texture = ExtResource( 10 )
 
 [node name="Dropzone2" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 124.0
-margin_top = 0.0
 margin_right = 244.0
-margin_bottom = 120.0
 answer_texture = ExtResource( 11 )
 label_num = 2
 
 [node name="Dropzone3" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
 margin_top = 124.0
-margin_right = 120.0
 margin_bottom = 244.0
 answer_texture = ExtResource( 11 )
 label_num = 3
 
 [node name="Dropzone4" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 124.0
 margin_top = 124.0
 margin_right = 244.0
@@ -400,7 +376,7 @@ __meta__ = {
 
 [node name="MarginContainer" type="MarginContainer" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/ScrollContainer"]
 margin_right = 540.0
-margin_bottom = 340.0
+margin_bottom = 440.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 20
@@ -415,8 +391,8 @@ __meta__ = {
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 520.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 500, 300 )
+margin_bottom = 420.0
+rect_min_size = Vector2( 500, 400 )
 rect_clip_content = false
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -475,7 +451,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 6
 size_flags_stretch_ratio = 8.53
 custom_fonts/font = ExtResource( 6 )
-text = "Video Objektif"
+text = "Uji Coba Objektif"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -507,16 +483,22 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.8
 custom_styles/panel = SubResource( 2 )
 
-[node name="VideoPlayer" type="VideoPlayer" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body"]
+[node name="ViewportContainer" type="ViewportContainer" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-stream = ExtResource( 2 )
-autoplay = true
+stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Viewport" type="Viewport" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/ViewportContainer"]
+size = Vector2( 399, 228 )
+size_override_stretch = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="ExplorationPhase" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/ViewportContainer/Viewport" instance=ExtResource( 49 )]
+scale = Vector2( 0.4, 0.4 )
 
 [node name="Popup" type="Popup" parent="."]
 anchor_right = 1.0
@@ -536,7 +518,7 @@ size_flags_stretch_ratio = 0.5
 
 [node name="Header" type="Panel" parent="Popup/ObjectiveVideoContainer2"]
 margin_right = 1004.0
-margin_bottom = 64.0
+margin_bottom = 54.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
 custom_styles/panel = SubResource( 1 )
@@ -552,9 +534,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Popup/ObjectiveVideoContainer2/Header/HBoxContainer"]
-margin_top = 22.0
+margin_top = 17.0
 margin_right = 874.0
-margin_bottom = 42.0
+margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 size_flags_stretch_ratio = 8.53
@@ -567,9 +549,9 @@ __meta__ = {
 
 [node name="ExpandVideoButton" type="Button" parent="Popup/ObjectiveVideoContainer2/Header/HBoxContainer"]
 margin_left = 881.0
-margin_top = 20.0
+margin_top = 15.0
 margin_right = 984.0
-margin_bottom = 44.0
+margin_bottom = 39.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 6 )
@@ -584,25 +566,32 @@ __meta__ = {
 }
 
 [node name="Body" type="Panel" parent="Popup/ObjectiveVideoContainer2"]
-margin_top = 68.0
+margin_top = 58.0
 margin_right = 1004.0
 margin_bottom = 580.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.95
 custom_styles/panel = SubResource( 2 )
 
-[node name="VideoPlayer" type="VideoPlayer" parent="Popup/ObjectiveVideoContainer2/Body"]
+[node name="ViewportContainer" type="ViewportContainer" parent="Popup/ObjectiveVideoContainer2/Body"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-stream = ExtResource( 2 )
-autoplay = true
+stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Viewport" type="Viewport" parent="Popup/ObjectiveVideoContainer2/Body/ViewportContainer"]
+size = Vector2( 1004, 522 )
+size_override_stretch = true
+handle_input_locally = false
+render_target_update_mode = 0
+gui_disable_input = true
+
+[node name="ExplorationPhase" parent="Popup/ObjectiveVideoContainer2/Body/ViewportContainer/Viewport" instance=ExtResource( 49 )]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 9 )
 volume_db = -10.0
 autoplay = true

@@ -6,7 +6,7 @@
 [ext_resource path="res://gameplay/resources/images/texts/var_10.png" type="Texture" id=4]
 [ext_resource path="res://gameplay/resources/images/items/badfruit_apple.png" type="Texture" id=5]
 [ext_resource path="res://gameplay/scenes/AutomationPhase/4_Loop_2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://gameplay/resources/videos/4_Loop.webm" type="VideoStream" id=7]
+[ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/4_Loop_preview.tscn" type="PackedScene" id=7]
 
 [node name="AutomationPhase2" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ) ]
@@ -24,5 +24,5 @@ bbcode_code_snippet = "[b]Objektif[/b]: Buat 10 jus apel
 10     }
 11 }
 [/code]"
-video_stream = ExtResource( 7 )
+exploration_preview_scene = ExtResource( 7 )
 next_scene = ExtResource( 6 )

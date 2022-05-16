@@ -34,14 +34,25 @@ margin_bottom = 110.0
 rect_min_size = Vector2( 100, 100 )
 custom_styles/panel = SubResource( 1 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 110.0
 margin_bottom = 110.0
+mouse_filter = 2
+custom_constants/margin_right = 10
+custom_constants/margin_top = 20
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 20
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 90.0
+margin_bottom = 80.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )

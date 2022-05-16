@@ -90,6 +90,7 @@ input_textures = [ null, ExtResource( 5 ), ExtResource( 4 ), ExtResource( 11 ), 
 state_textures = [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ) ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 17 )
 volume_db = -10.0
 autoplay = true

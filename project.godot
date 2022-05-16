@@ -132,6 +132,10 @@ config/name="TA Game-Based Learning"
 run/main_scene="res://gameplay/scenes/Main/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneChanger="*res://gameplay/components/SceneChanger/SceneChanger.tscn"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "dialogic" )

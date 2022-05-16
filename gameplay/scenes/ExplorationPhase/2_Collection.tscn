@@ -19,6 +19,7 @@
 [ext_resource path="res://gameplay/components/DontPause.gd" type="Script" id=17]
 
 [node name="ExplorationPhase" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 17 )
 
 [node name="TextureRect" type="TextureRect" parent="."]

@@ -8,8 +8,8 @@
 [node name="ExplorationItem" type="MarginContainer" groups=["dropzone"]]
 anchor_right = 0.117188
 anchor_bottom = 0.2
-margin_right = -80.0
-margin_bottom = -80.0
+margin_right = -20.0005
+margin_bottom = -20.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": true

@@ -11,6 +11,7 @@ export var randomized_drag_preview = false
 var texture: Texture
 
 func _ready() -> void:
+	$Icon.rect_min_size = $Icon.rect_min_size * (get_viewport_rect().size.x / 1024)
 	$Icon.texture = state_textures[start_state]
 	texture = $Icon.texture
 	if !texture_visible:
@@ -23,6 +24,7 @@ func get_drag_data(_position: Vector2):
 		texture = state_textures[randi() % len(state_textures)]
 		preview_texture_rect.texture = texture
 	preview_texture_rect.visible = true
+	preview_texture_rect.rect_size = preview_texture_rect.rect_size * (get_viewport_rect().size.x / 1024)
 	preview_texture_rect.rect_position = -0.5 * preview_texture_rect.rect_size
 	preview_control.add_child(preview_texture_rect)
 	set_drag_preview(preview_control)

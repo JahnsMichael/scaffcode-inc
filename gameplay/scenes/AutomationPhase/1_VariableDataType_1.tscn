@@ -1,9 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gameplay/scenes/AutomationPhase/1_VariableDataType_2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://gameplay/resources/videos/1_VariableDataType_1.webm" type="VideoStream" id=3]
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
-video_stream = ExtResource( 3 )
 next_scene = ExtResource( 2 )
