@@ -124,6 +124,11 @@ config/icon="res://icon.png"
 
 SceneChanger="*res://gameplay/components/SceneChanger/SceneChanger.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "dialogic" )
