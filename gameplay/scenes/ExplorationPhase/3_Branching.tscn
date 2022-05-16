@@ -25,11 +25,12 @@
 [ext_resource path="res://gameplay/components/ExplorationPhase/ExplorationInterface.tscn" type="PackedScene" id=23]
 [ext_resource path="res://gameplay/scenes/AutomationPhase/3_Branching_1.tscn" type="PackedScene" id=24]
 [ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=25]
-[ext_resource path="res://gameplay/components/DontPause.gd" type="Script" id=26]
+[ext_resource path="res://gameplay/components/ExplorationPhase/ExplorationPhase.gd" type="Script" id=26]
 
 [node name="ExplorationPhase" type="Node2D"]
 pause_mode = 2
 script = ExtResource( 26 )
+dialog_name = "Explorasi-Branching"
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
