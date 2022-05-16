@@ -27,6 +27,8 @@ func dialog_listener(string):
 			SceneChanger.change_scene("res://gameplay/scenes/ExplorationPhase/3_Branching.tscn")
 		"4":
 			SceneChanger.change_scene("res://gameplay/scenes/ExplorationPhase/4_Loop.tscn")
+		"out":
+			SceneChanger.change_scene("res://gameplay/scenes/Main/Main.tscn")
 			
 func end_dialog(data):
 	get_tree().paused = false
