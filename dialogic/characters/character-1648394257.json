@@ -1,0 +1,21 @@
+{
+	"color": "#ff002eff",
+	"description": "Seorang pelayan dari toko jus",
+	"display_name": "Grenda",
+	"display_name_bool": true,
+	"id": "character-1648394257.json",
+	"mirror_portraits": false,
+	"name": "Grenda-Pelayan",
+	"nickname": "Gr",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://icon.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

@@ -1,0 +1,127 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://gameplay/components/Dropzone/Dropzone.gd" type="Script" id=1]
+[ext_resource path="res://gameplay/resources/fonts/mono.tres" type="DynamicFont" id=2]
+[ext_resource path="res://gameplay/resources/themes/Dropzone_Panel/Dropzone_Panel_Default.tres" type="StyleBox" id=3]
+[ext_resource path="res://gameplay/resources/themes/Dropzone_Panel/Dropzone_Panel_True.tres" type="StyleBox" id=4]
+[ext_resource path="res://gameplay/resources/themes/Dropzone_Panel/Dropzone_Panel_False.tres" type="StyleBox" id=5]
+[ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=6]
+[ext_resource path="res://gameplay/resources/themes/Dropzone_ClearButton/Dropzone_ClearButton.tres" type="StyleBox" id=7]
+[ext_resource path="res://gameplay/resources/audios/sfx_pop.wav" type="AudioStream" id=8]
+[ext_resource path="res://gameplay/resources/themes/Dropzone_ClearButton/Dropzone_HintButton.tres" type="StyleBox" id=9]
+
+[node name="Dropzone" type="MarginContainer" groups=["dropzone"]]
+margin_right = 120.0
+margin_bottom = 120.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+default_stylebox = ExtResource( 3 )
+true_stylebox = ExtResource( 4 )
+false_stylebox = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 100, 100 )
+rect_clip_content = true
+custom_styles/panel = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = 26.0
+margin_right = 46.0
+margin_bottom = 46.0
+size_flags_horizontal = 9
+size_flags_vertical = 8
+custom_constants/separation = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClearButton" type="Button" parent="Panel/HBoxContainer"]
+visible = false
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.09
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+text = "Hapus"
+
+[node name="HintButton" type="Button" parent="Panel/HBoxContainer"]
+visible = false
+margin_left = 73.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 9 )
+custom_styles/normal = ExtResource( 9 )
+text = "?"
+
+[node name="Label" type="RichTextLabel" parent="."]
+margin_left = 10.0
+margin_top = 47.0
+margin_right = 110.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 0, 25 )
+rect_clip_content = false
+size_flags_vertical = 4
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][color=grey][wave amp=50 freq=2]..1..[/wave][/color][/center]"
+text = "..1.."
+scroll_active = false
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 110.0
+mouse_filter = 2
+custom_constants/margin_right = 10
+custom_constants/margin_top = 20
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 20
+
+[node name="Icon" type="TextureRect" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 90.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[connection signal="pressed" from="Panel/HBoxContainer/ClearButton" to="." method="_on_ClearButton_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/HintButton" to="." method="_on_HintButton_pressed"]

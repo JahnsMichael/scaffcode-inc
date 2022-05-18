@@ -1,0 +1,37 @@
+{
+	"events": [
+		{
+			"character": "character-1651311669.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Halo, nama nenek Lasmi. Nenek sangat menyukai jus di toko ini. Sudah 5 tahun aku menjadi pelanggan setia di toko ini."
+		},
+		{
+			"character": "character-1651491876.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Apa jus yang paling nenek sukai di sini?"
+		},
+		{
+			"character": "character-1651311669.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nenek sangat menyukai jus alpukat dengan sedikit susu kental manis coklat."
+		},
+		{
+			"character": "character-1651491876.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wah, aku jadi ingin mencobanya juga. Terima kasih banyak Nenek Lasmi!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651491738.json",
+		"name": "Nenek Lasmi-Langganan"
+	}
+}

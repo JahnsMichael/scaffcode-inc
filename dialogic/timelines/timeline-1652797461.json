@@ -1,0 +1,69 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kegiatan kali ini cocok untuk jadi bahan pembelajaran kita mengenai [color=green]tipe data koleksi[/color]"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Saya sudah menyiapkan contoh kode program yang belum lengkap dan kamu akan belajar pemrograman dengan cara melengkapinya."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu sudah pernah belajar tentang tipe data bukan? Tipe data koleksi bisa dikatakan sebagai bentuk majemuk dari tipe data biasa."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Misalkan kalau saya mempunyai tipe data biasa seperti [color=red]Pisang[/color] artinya data tersebut pasti adalah sebuah pisang, namun koleksi dari [color=red]Pisang[/color] yang biasa ditulis [color=red]Pisang[][/color] artinya data tersebut adalah satu atau lebih pisang."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Salah satu fungsi yang sudah kubuat untuk membantumu adalah fungsi [color=green]tambah[/color]. Fungsi ini menerima 2 input, input yang pertama adalah [color=red]Buah[/color] yang ingin dimasukan ke dalam koleksi. Input yang kedua adalah angka yang menunjukkan jumlah buah yang ingin dimasukkan."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Jika kamu kebingungan atau lupa, tekan saja tombol [color=green]Bantuan[/color] untuk menanyakan konsep-konsep yang kujelaskan tadi. Selamat belajar!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652797461.json",
+		"name": "Automasi-Intro-Collection"
+	}
+}

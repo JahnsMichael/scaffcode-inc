@@ -1,0 +1,318 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kegiatan kali ini cocok untuk jadi bahan pembelajaran kita mengenai [color=green]variabel[/color] dan [color=green]tipe data[/color]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Saya sudah menyiapkan contoh kode program yang belum lengkap dan kamu akan belajar pemrograman dengan cara melengkapinya."
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "Pertanyaan"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "Default",
+			"question": "Tentunya banyak hal yang kamu belum ketahui, adakah yang ingin kamu tanyakan sebelum mulai?"
+		},
+		{
+			"choice": "Aku baru pertama kali melihat tampilan Scaffbot",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "Empty",
+			"text": "Baiklah ini adalah tampilan Scaffbot. Di sinilah kita akan mencoba membuat program automasi setiap kegiatan yang ingin diautomasi."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Mungkin kamu sudah tau, Scaffbot adalah komputer mini yang bisa diprogram serta dipasangkan pada mesin tertentu untuk melakukan tugas-tugas tertentu di dunia nyata."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu saat ini melihat tampilan dari konfigurasi Scaffbot, tempat di mana kamu dapat melakukan pemrograman, dan program tersebut akan menggerakkan mesin yang nanti akan dipasangkan kepadanya,"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Jangan khawatir dengan permesinan, tim teknikal Scaffcode INC. yang akan memasangkannya. Kamu cukup belajar cara membuat program saja saat ini."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Kalau kamu lihat, tampilan Scaffbot dibagi menjadi 3 kolom, ada kolom  [color=blue]Pilihan Jawaban[/color], [color=blue]Slot Jawaban[/color], dan kolom yang terdiri dari [color=blue]Program[/color] yang dibuat serta layar interaksi untuk [color=blue]Ekplorasi Objektif[/color]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Ini adalah tampilan Scaffbot untuk pembelajaran saja, nantinya jika kamu sudah mahir tampilan ini hanya berupa editor teks saja tempat kamu menuliskan program. Saya menyiapkan ini khusus untuk pembelajaranmu."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Kamu bisa meng-klik dan menarik barang apapun yang ada di [color=blue]Pilihan Jawaban[/color] ke dalam [color=blue]Slot Jawaban[/color]. Nantinya bagian-bagian yang kosong di [color=blue]Program[/color] akan terisi sesuai dengan nomor slot jawaban yang kamu isi. "
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Setelah kamu yakin dengan jawabanmu, klik tombol [color=green]Jalankan[/color] yang terdapat pada layar [color=blue]Program[/color]. "
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aku sudah mengatur supaya Scaffbot dapat memeriksa jawabanmu, jawaban benar akan ditandai dengan warna [color=green]hijau[/color], dan jawaban salah akan ditandai dengan [color=red]merah[/color]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Semisal nantinya kamu ingin menghapus jawabanmu, terdapat tombol [color=red]Hapus[/color] di setiap slot untuk menghapus jawabanmu di slot tertentu, atau tombol [color=red]Ulangi[/color] untuk menghapus semua slot sekaligus."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Jika jawabanmu sudah benar semua, kamu dapat meng-klik tombol [color=green]Selanjutnya[/color] karena aku sudah menyiapkan beberapa latihan selanjutnya untukmu."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu dapat melakukan ulang simulasi dari kegiatan yang ingin diautomasi di layar [color=blue]Eksplorasi Objektif[/color] langsung pada perangkat Scaffbot sehingga tidak mengganggu Lemi dalam pekerjaannya."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Selama kamu mengerjakan, mungkin saja aku sedang berkeliling di sekitar tempat jus, tetapi aku sudah menyiapkan tombol khusus supaya kita bisa berkomunikasi lewat layar Scaffbot. Jika kamu perlu bantuanku, silakan klik saja tombol [color=green]Bantuan[/color]."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Apa arti dari warna-warna tulisan pada program?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bahasa yang dipakai untuk pemrograman pada perangkat Scaffbot mungkin asing bagimu. Saya bisa menjelaskan sedikit mengenai apa-apa saja arti dari kata-kata tertentu pada bahasa pemrograman Scaffbot."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kalau kamu lihat, setiap program yang kamu temui pasti memiliki warna tertentu di setiap kata-katanya. Saya memberikan warna tersebut untuk membantumu."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kata yang diberi warna [color=red]merah[/color] menunjukkan bahwa kata tersebut adalah sebuah [i]tipe data[/i]. Sedangkan warna [b]hitam[/b] menunjukkan bahwa kata tersebut adalah [i]data[/i] ataupun [i]variabel[/i]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kata yang diberi warna [color=green]hijau[/color] menunjukkan bahwa kata tersebut adalah sebuah [i]fungsi[/i]. Sedangkan warna [color=#ef7109]jingga[/color] menunjukkan bahwa kata tersebut sebuah operator seperti [color=#ef7109]+[/color], [color=#ef7109]-[/color], [color=#ef7109]*[/color], dan [color=#ef7109]/[/color]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Terakhir, kata yang diberi warna [color=blue]biru[/color] menunjukkan bahwa kata tersebut adalah sebuah [i]kata kunci[/i] yang melakukan perintah tertentu pada bahasa pemrograman."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Istilah seperti variabel, tipe data, fungsi, dan sebagainya akan dijelaskan sesuai dengan objektif yang nanti coba kamu kerjakan."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Apa itu variabel dan tipe data?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sedikit tentang variabel dan tipe data. Variabel adalah sebuah nama yang kita buat yang dapat menyimpan sebuah nilai atau data. Anggap lah seperti alias bagi suatu objek yang sulit dideskripsikan dengan kata-kata. "
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Misalkan ada sebuah data yaitu sebuah benda yang berbentuk bulat dan berwarna merah, kita dapat menamainya \"apel\", maka saat kita menyebut \"apel\" kita sama-sama tahu data yang dimaksud adalah benda yang berbentuk bulat dan bewarna merah. Dalam contoh tersebut, \"apel\" adalah sebuah variabel."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Pada bagian [color=blue]Program[/color] variabel ditunjukkan dengan kata-kata yang berwarna [b]hitam[/b]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Dalam penulisannya, untuk membuat sebuah variabel kita dapat menuliskannya dengan format [color=red]TipeData[/color] namaVariabel = data."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Sistem yang kita pakai, yaitu Scaffbot, mengharuskan sebuah variabel memiliki tipe data tertentu sehingga variabel tersebut tidak bisa asal-asalan diisi dengan sembarang jenis data. [color=green]Tipe data[/color] dapat dikatakan sebagai jenis dari suatu data yang menunjukkan kesamaan tertentu."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Tipe data sebenarnya dapat didefinisikan sendiri, namun kamu yang masih pemula belum saatnya mendalami hal tersebut, sehingga saya sudah buatkan tipe data yang sesuai untuk kasus kita kali ini."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Pada bagian [color=blue]Program[/color] tipe data ditunjukkan dengan kata-kata yang berwarna [color=red]merah[/color], contohnya seperti [color=red]Apel[/color] dan [color=red]Jus[/color]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Dalam penulisannya, untuk membuat sebuah variabel kita dapat menuliskannya dengan format [color=red]TipeData[/color] namaVariabel = data."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Bagaimana dengan tulisan berwarna hijau?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Terdapat [color=green]fungsi[/color] yang ditunjukkan dengan warna [color=green]hijau[/color]. Sederhananya, sama seperti variabel, fungsi itu adalah sebuah nama yang dapat berisi sesuatu. Namun, berbeda dengan variabel yang berisikan data, fungsi berisikan satu atau lebih perintah dan akhirnya mengembalikan nilai tertentu."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Sebagai contoh, pada bagian [color=blue]Program[/color] kamu akan melihat fungsi [color=green]ambilBuah[/color]. Artinya saat [color=green]ambilBuah[/color] dipanggil, Scaffbot akan menjalankan urutan perintah yang didefinisikan sebagai fungsi yang bernama [color=green]ambilBuah[/color]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Untuk memudahkanmu, aku tidak menyuruhmu membuat semuanya dari 0 melainkan ada beberapa fungsi yang sudah aku siapkan untukmu. ."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "[color=green]ambilBuah[/color] sesuai namanya berfungsi untuk mengambil buah sesuai dengan buah apa yang ingin diambil. [color=green]ambilBuah[/color] menerima input berupa data dengan tipe data [color=red]Buah[/color] dan menghasilkan buah tersebut. "
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "[color=green]blender[/color] berfungsi untuk menggiling buah menjadi jus. [color=green]blender[/color] menerima input berupa data dengan tipe data [color=red]Buah[/color] dan memberikan output berupa data dengan tipe data [color=red]Jus[/color]."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "[color=green]sajikan[/color] berfungsi untuk menungkan jus ke dalam gelas dan menyajikannya ke konsumen. [color=green]sajikan[/color] menerima input berupa data dengan tipe data [color=red]Jus[/color] namun tidak memberikan output apapun karena hanya menyajikan jus ke konsumen."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Nanti saja",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Jika kamu kebingungan atau lupa, tekan saja tombol [color=green]Bantuan[/color] untuk menanyakan konsep-konsep yang kujelaskan tadi. Selamat belajar!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652790970.json",
+		"name": "Automasi-Intro-Variabel"
+	}
+}

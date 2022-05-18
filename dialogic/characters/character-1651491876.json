@@ -1,0 +1,21 @@
+{
+	"color": "#ff01ffed",
+	"description": "",
+	"display_name": "Mika",
+	"display_name_bool": true,
+	"id": "character-1651491876.json",
+	"mirror_portraits": false,
+	"name": "Myself",
+	"nickname": "Mi",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

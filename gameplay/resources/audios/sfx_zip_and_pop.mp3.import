@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_zip_and_pop.mp3-ca63faa020c22b3bd8dc733c1ac2611b.mp3str"
+
+[deps]
+
+source_file="res://gameplay/resources/audios/sfx_zip_and_pop.mp3"
+dest_files=[ "res://.import/sfx_zip_and_pop.mp3-ca63faa020c22b3bd8dc733c1ac2611b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

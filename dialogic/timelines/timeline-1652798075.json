@@ -1,0 +1,104 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "Pertanyaan"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Ada yang ingin kamu tanyakan?"
+		},
+		{
+			"choice": "Tentang tipe data koleksi",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu sudah pernah belajar tentang tipe data bukan? Tipe data koleksi bisa dikatakan sebagai bentuk majemuk dari tipe data biasa."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Misalkan kalau saya mempunyai tipe data biasa seperti [color=red]Pisang[/color] artinya data tersebut pasti adalah sebuah pisang, namun koleksi dari [color=red]Pisang[/color] yang biasa ditulis [color=red]Pisang[][/color] artinya data tersebut adalah satu atau lebih pisang."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Tentang fungsi tambah",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Salah satu fungsi yang sudah kubuat untuk membantumu adalah fungsi [color=green]tambah[/color]. Fungsi ini menerima 2 input, input yang pertama adalah [color=red]Buah[/color] yang ingin dimasukan ke dalam koleksi. Input yang kedua adalah angka yang menunjukkan jumlah buah yang ingin dimasukkan."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Tidak jadi",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Baiklah, jangan sungkan memanggilku jika ada kesulitan."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652798075.json",
+		"name": "Automasi-Bantuan-Collection"
+	}
+}

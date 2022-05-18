@@ -1,0 +1,21 @@
+{
+	"color": "#ffff0000",
+	"description": "Seorang pembeli baru yang ingin mencoba jus",
+	"display_name": "Friya",
+	"display_name_bool": true,
+	"id": "character-1648393302.json",
+	"mirror_portraits": false,
+	"name": "Friya-Pembeli Baru",
+	"nickname": "Fr",
+	"nickname_bool": true,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://icon.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

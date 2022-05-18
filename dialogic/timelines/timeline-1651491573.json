@@ -1,0 +1,58 @@
+{
+	"events": [
+		{
+			"character": "character-1648394257.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Selamat data di toko jus kami, apakah ada yang bisa saya bantu."
+		},
+		{
+			"choice": "Iya, apa menu favorit pada toko ini?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1648394257.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Menu favorit kami adalah Jus Alpukat dengan susu kental manis coklat."
+		},
+		{
+			"choice": "Iya, toilet ada disebelah mana ya?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1648394257.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Toilet ada di sebelah kanan dari pintu masuk."
+		},
+		{
+			"choice": "Tidak, terimakasih.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651491573.json",
+		"name": "Grenda-Pelayan"
+	}
+}

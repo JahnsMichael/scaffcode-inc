@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Saat kamu membuat jus sebelumnya, buah-buahannya sudah saya sortir supaya semuanya punya kualitas yang bagus. Sayangnya buah-buahan yang saya dapat tidak selalu dalam keadaan bagus."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Buah yang tidak bagus sederhananya dapat dilihat dari warna kulitnya. Kalau warna kulitnya kusam maka berarti itu bukan buah yang bagus. Kamu bisa langsung buang buah tersebut ke tempat sampah."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Jangan sampai buah yang dipakai untuk jus adalah buah yang jelek, kualitas yang utama!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652721024.json",
+		"name": "Explorasi-Branching"
+	}
+}

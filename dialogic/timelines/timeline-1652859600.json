@@ -1,0 +1,45 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sedikit clue untukmu, [color=green]tambah[/color] menerima 2 input, input yang pertama adalah [color=red]Buah[/color], (seperti [color=red]Apel[/color], [color=red]Pisang[/color], dsb) yang ingin dimasukan ke dalam koleksi. Input yang kedua adalah angka yang menunjukkan jumlah buah yang ingin dimasukkan."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Urutannya sangat penting, jangan sampai tertukar."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652859600.json",
+		"name": "hint-2-1-1"
+	}
+}

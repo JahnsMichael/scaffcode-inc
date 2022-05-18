@@ -1,0 +1,93 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"condition": "",
+			"definition": "1651492576-848",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Selamat, kamu sudah menyelesaikan semua latihan yang tersedia di tempat ini."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mungkin untuk saat ini kamu cukup belajar sampai sini terlebih dahulu, dan coba pikirkan terlebih dahulu apakah kamu tertarik untuk mendalami bidang ini di masa depan."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Namun, kamu dapat terus datang ke tempat ini untuk mencoba ulang semua latihan yang telah kamu lakukan."
+		},
+		{
+			"character": "character-1651491876.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Baik Advi! Terima kasih banyak telah memperkenalkanku dengan dunia pemrograman."
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu dapat mencoba kembali semua latihan yang sudah kamu lakukan dengan berbicara kepada Lemi. Kamu bisa kembali ke menu utama dengan meng-klik [color=red]tombol merah[/color] yang ada di dekat Advi."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "",
+			"definition": "1651492576-848",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[b]Lihat lah sekeliling dan cobalah untuk bersosialisasi[/b]. Banyak hal yang dapat kamu pelajari di sini."
+		},
+		{
+			"character": "character-1651491876.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Siap, laksanakan!!!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652266910.json",
+		"name": "Advi-Map"
+	}
+}

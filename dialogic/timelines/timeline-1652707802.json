@@ -1,0 +1,193 @@
+{
+	"events": [
+		{
+			"condition": "!=",
+			"definition": "1652717677-989",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu pergi bersama Advi ke tempat jus untuk belajar pemrograman di sana."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"condition": "==",
+			"definition": "1652717677-989",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://gameplay/resources/audios/bgm_heartbreaking.mp3",
+			"volume": 0
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu adalah Mika, seorang anak SMA yang juga merupakan anak dari Tony, CEO perusahaan teknologi yang ternama, Scaffcode INC."
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Beberapa minggu yang lalu, ayahmu, CEO Scaffcode INC. meninggal dunia karena sakit. Advi, rekan kerja ayahmu yang juga merupakan Chief Technology Officer (CTO) mendatangimu dan memberikan surat yang berisikan pesan terakhir dari ayahmu sebelum beliau meninggal."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": false,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hai Mika, perkenalkan aku Advi, rekan kerja ayahmu. Aku turut berduka karena kepergian ayahmu. Sebelum beliau meninggal, ayahmu sempat menuliskan surat untukmu. Silakan dibaca."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": false,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[i]\"Scaffcode INC. merupakan perusahaan teknologi yang ayah dirikan untuk membantu kehidupan masyarakat di kota ini. Ayah rindu kamu memiliki semangat yang sama seperti ayah untuk membangun kota ini. Oleh karena itu, perusahaan ini ayah ingin wariskan kepadamu.\"[/i]"
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[i]\"Perusahaan ini memiliki tanggung jawab yang besar sehingga kamu sebagai pemimpin perlu mengerti hal-hal mendasar tentang software technology dan juga memiliki passion dalam bidang ini.\"[/i]"
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[i]\"Ayah tidak memaksa kamu untuk memimpin perusahaan ini, kamu dapat hidup dengan bebas sesuai bakat dan keinginanmu. Tetapi jika kamu ingin memimpin perusahaan ini, kamu harus mulai belajar hal-hal baru seperti menjadi programmer.\"[/i]"
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[i]\"Teman baik ayah, Advi, akan membantu kamu jika kamu ingin belajar tentang software technology ini. Cobalah belajar terlebih dahulu daripadanya, dan lihat apakah bidang ini cocok denganmu\"[/i]"
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[i]\"Ini semua terserah padamu, ayah percaya kamu akan memilih yang terbaik untuk dirimu. Salam hangat dari ayah-mu tercinta.\"[/i]"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": false,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sama seperti Tony, aku tidak akan memaksamu untuk memimpin perusahaan ini. "
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Saat ini perusahaan tetap stabil karena sistem organisasi yang sudah baik dan siap untuk kemungkinan terburuk, jadi jangan khawatir."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Terlepas dari apakah kamu tertarik atau tidak terhadap bidang ini, aku akan memperkenalkanmu dengan bidang teknologi, sesuai dengan keinginan Tony. Mari ikutlah aku."
+		},
+		{
+			"character": "character-1652708966.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kamu memutuskan untuk mengikuti Advi dan belajar darinya."
+		},
+		{
+			"definition": "1652717677-989",
+			"event_id": "dialogic_014",
+			"operation": "+",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652707802.json",
+		"name": "Storyboard"
+	}
+}

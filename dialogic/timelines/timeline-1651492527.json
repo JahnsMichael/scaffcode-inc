@@ -1,0 +1,201 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"condition": "",
+			"definition": "1651492607-895",
+			"event_id": "dialogic_012",
+			"value": "0"
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sepertinya aku mengenal mu. Bukankah kau anak dari Tony sang pemilik dari perusahaan technology itu?"
+		},
+		{
+			"character": "character-1651491876.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Iya, betul. Bagaimana kau bisa tahu?"
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kau memiliki muka yang mirip, layaknya orang tua dan anak HAHAHAHA."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Mirror",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hai Lemi! Apa kabarmu? Sudah lama ya kita tidak bertemu."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wah lihat siapa ini? Si ahli komputer Advi rupanya. Aku sudah menunggumu untuk membantuku membuat sistem automasi pembuatan jus di tempat ini."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tenang saja, kami akan membantu. Kali ini aku datang dengan Mika sekaligus mengajarkannya cara memprogram Scaffbot."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mantap! Kalau begitu, langsung saja eksekusi!"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ada 4 hal yang mungkin bisa di automasi, membuat jus satuan, menyusun buah ke display buah, menyortir buah yang busuk sebelum  membuat jus, dan juga membuat jus dalam jumlah besar."
+		},
+		{
+			"definition": "1651492607-895",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Bagian mana kali ini yang ingin di automasi?"
+		},
+		{
+			"choice": "Membuat jus buah satuan (Variabel dan Tipe Data)",
+			"condition": "",
+			"definition": "1651492607-895",
+			"event_id": "dialogic_011",
+			"value": "1"
+		},
+		{
+			"emit_signal": "1",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Menyusun buah ke display (Tipe Data Koleksi)",
+			"condition": "",
+			"definition": "1651492546-695",
+			"event_id": "dialogic_011",
+			"value": "1"
+		},
+		{
+			"emit_signal": "2",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Memeriksa kualitas buah (Percabangan/Kondisi)",
+			"condition": "",
+			"definition": "1651492553-497",
+			"event_id": "dialogic_011",
+			"value": "1"
+		},
+		{
+			"emit_signal": "3",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Membuat jus dalam jumlah banyak (Perulangan/Iterasi)",
+			"condition": "",
+			"definition": "1651492562-861",
+			"event_id": "dialogic_011",
+			"value": "1"
+		},
+		{
+			"emit_signal": "4",
+			"event_id": "dialogic_040"
+		},
+		{
+			"choice": "Beri aku waktu untuk memikirkannya.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651492527.json",
+		"name": "Lemi-Penjual"
+	}
+}

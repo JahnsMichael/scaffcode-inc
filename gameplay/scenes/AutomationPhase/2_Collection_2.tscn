@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://gameplay/resources/images/texts/var_10.png" type="Texture" id=2]
+[ext_resource path="res://gameplay/resources/images/items/fruit_banana.png" type="Texture" id=3]
+[ext_resource path="res://gameplay/resources/images/texts/func_tambah.png" type="Texture" id=4]
+[ext_resource path="res://gameplay/resources/images/texts/type_Pisang.png" type="Texture" id=5]
+[ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/2_Collection_preview.tscn" type="PackedScene" id=6]
+
+[node name="AutomationPhase" instance=ExtResource( 1 )]
+answers_texture = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ]
+hint_dialog_names = [ "hint-2-2-1", "hint-empty", "hint-empty", "hint-empty" ]
+bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 pisang ke dalam kotak pisang
+[code]
+1 @1[] kotakPisang = [color=red]Pisang[/color][10]()
+2 kotakPisang[color=green]@2[/color](@3, @4)
+[/code]"
+exploration_preview_scene = ExtResource( 6 )
+help_dialog_name = "Automasi-Bantuan-Collection"
+end_dialog_name = "Advi-Koleksi Done"

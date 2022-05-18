@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Untuk membuat jus dalam jumlah besar, tidak ada yang berbeda dengan membuat jus satuan, hanya saja kita perlu melakukan hal yang sama berkali-kali."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Karena itulah saya perlu bantuan untuk automasi, supaya kegiatan yang berulang-ulang tidak perlu menghabiskan tenaga begitu banyak."
+		},
+		{
+			"character": "character-1651489890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Karena cara membuat jusnya sama persis, sepertinya saya tidak perlu mengajarkannya lagi ya, saya yakin kamu bisa."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652721388.json",
+		"name": "Explorasi-Loop"
+	}
+}

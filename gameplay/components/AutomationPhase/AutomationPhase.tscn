@@ -1,0 +1,620 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.gd" type="Script" id=1]
+[ext_resource path="res://gameplay/components/Dropzone/Dropzone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://gameplay/resources/images/backgrounds/level-background.jpg" type="Texture" id=4]
+[ext_resource path="res://gameplay/components/Spawner/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gameplay/resources/fonts/default.tres" type="DynamicFont" id=6]
+[ext_resource path="res://gameplay/resources/fonts/mono.tres" type="DynamicFont" id=7]
+[ext_resource path="res://gameplay/resources/fonts/bold.tres" type="DynamicFont" id=8]
+[ext_resource path="res://gameplay/resources/audios/bgm_future_technology.mp3" type="AudioStream" id=9]
+[ext_resource path="res://gameplay/resources/images/items/fruit_apple.png" type="Texture" id=10]
+[ext_resource path="res://gameplay/resources/images/items/fruit_banana.png" type="Texture" id=11]
+[ext_resource path="res://gameplay/resources/themes/AutomationPhase_Run/AutomationPhase_Run_Default.tres" type="StyleBox" id=12]
+[ext_resource path="res://gameplay/resources/themes/AutomationPhase_Reset/AutomationPhase_Reset_Default.tres" type="StyleBox" id=13]
+[ext_resource path="res://gameplay/resources/images/items/fruit_orange.png" type="Texture" id=14]
+[ext_resource path="res://gameplay/resources/images/texts/var_jus.png" type="Texture" id=15]
+[ext_resource path="res://gameplay/resources/images/items/fruit_avocado.png" type="Texture" id=16]
+[ext_resource path="res://gameplay/resources/images/texts/op_gte.png" type="Texture" id=17]
+[ext_resource path="res://gameplay/resources/images/texts/var_10.png" type="Texture" id=18]
+[ext_resource path="res://gameplay/resources/images/texts/op_inequal.png" type="Texture" id=19]
+[ext_resource path="res://gameplay/resources/images/texts/op_div.png" type="Texture" id=20]
+[ext_resource path="res://gameplay/resources/images/texts/op_minus.png" type="Texture" id=21]
+[ext_resource path="res://gameplay/resources/images/texts/var_jumlahJus.png" type="Texture" id=22]
+[ext_resource path="res://gameplay/resources/images/texts/func_tambah.png" type="Texture" id=23]
+[ext_resource path="res://gameplay/resources/images/texts/type_Pisang.png" type="Texture" id=24]
+[ext_resource path="res://gameplay/resources/images/texts/op_equal.png" type="Texture" id=25]
+[ext_resource path="res://gameplay/resources/images/texts/type_Apel.png" type="Texture" id=26]
+[ext_resource path="res://gameplay/resources/images/texts/statement_if.png" type="Texture" id=27]
+[ext_resource path="res://gameplay/resources/images/texts/statement_else.png" type="Texture" id=28]
+[ext_resource path="res://gameplay/resources/images/texts/func_ambilBuah.png" type="Texture" id=29]
+[ext_resource path="res://gameplay/resources/images/texts/op_plus.png" type="Texture" id=30]
+[ext_resource path="res://gameplay/resources/images/texts/type_Alpukat.png" type="Texture" id=31]
+[ext_resource path="res://gameplay/resources/images/texts/var_buah.png" type="Texture" id=32]
+[ext_resource path="res://gameplay/resources/images/texts/func_blender.png" type="Texture" id=33]
+[ext_resource path="res://gameplay/resources/images/texts/op_lte.png" type="Texture" id=34]
+[ext_resource path="res://gameplay/resources/images/texts/func_sajikan.png" type="Texture" id=35]
+[ext_resource path="res://gameplay/resources/images/texts/type_Jeruk.png" type="Texture" id=36]
+[ext_resource path="res://gameplay/resources/images/texts/op_gt.png" type="Texture" id=37]
+[ext_resource path="res://gameplay/resources/images/texts/func_buang.png" type="Texture" id=38]
+[ext_resource path="res://gameplay/resources/images/texts/op_lt.png" type="Texture" id=39]
+[ext_resource path="res://gameplay/resources/images/texts/statement_while.png" type="Texture" id=40]
+[ext_resource path="res://gameplay/resources/images/texts/type_Jus.png" type="Texture" id=41]
+[ext_resource path="res://gameplay/resources/images/items/badfruit_apple.png" type="Texture" id=42]
+[ext_resource path="res://gameplay/resources/images/items/badfruit_avocado.png" type="Texture" id=43]
+[ext_resource path="res://gameplay/resources/images/items/badfruit_banana.png" type="Texture" id=44]
+[ext_resource path="res://gameplay/resources/images/items/badfruit_orange.png" type="Texture" id=45]
+[ext_resource path="res://gameplay/scenes/Maps/JuiceBar.tscn" type="PackedScene" id=46]
+[ext_resource path="res://gameplay/resources/images/texts/var_9.png" type="Texture" id=47]
+[ext_resource path="res://gameplay/resources/images/texts/var_1.png" type="Texture" id=48]
+[ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/1_VariableDataType_preview.tscn" type="PackedScene" id=49]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 0.74902 )
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[node name="AutomationPhase" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+spawners_texture = [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 15 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 18 ), ExtResource( 32 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 24 ), ExtResource( 36 ), ExtResource( 41 ), ExtResource( 33 ), ExtResource( 23 ), ExtResource( 35 ), ExtResource( 29 ), ExtResource( 38 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 17 ), ExtResource( 39 ), ExtResource( 34 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 30 ), ExtResource( 21 ), ExtResource( 20 ) ]
+answers_texture = [ ExtResource( 10 ), ExtResource( 32 ), ExtResource( 15 ) ]
+bbcode_code_snippet = "[b]Objektif[/b]: Buat 1 jus apel
+[code]
+1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color](@1)
+2 [color=red]Jus[/color] jus = [color=green]blender[/color](@2)
+3 [color=green]sajikan[/color](@3)
+[/code]"
+exploration_preview_scene = ExtResource( 49 )
+next_scene = ExtResource( 46 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1014.0
+margin_bottom = 590.0
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="Margin/HBoxContainer"]
+margin_right = 298.0
+margin_bottom = 580.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="Header" type="Panel" parent="Margin/HBoxContainer/ChoicesContainer"]
+margin_right = 298.0
+margin_bottom = 52.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.12
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Margin/HBoxContainer/ChoicesContainer/Header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+custom_fonts/font = ExtResource( 6 )
+text = "Pilihan Jawaban"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Panel" parent="Margin/HBoxContainer/ChoicesContainer"]
+margin_top = 56.0
+margin_right = 298.0
+margin_bottom = 580.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.2
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Margin/HBoxContainer/ChoicesContainer/Body"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer"]
+margin_right = 298.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 27
+custom_constants/margin_top = 16
+custom_constants/margin_left = 27
+custom_constants/margin_bottom = 16
+
+[node name="GridContainer" type="GridContainer" parent="Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer/MarginContainer"]
+margin_left = 27.0
+margin_top = 16.0
+margin_right = 271.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Spawner" parent="Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 5 )]
+
+[node name="Spawner2" parent="Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 5 )]
+margin_left = 124.0
+margin_right = 244.0
+
+[node name="AnswerContainer" type="VBoxContainer" parent="Margin/HBoxContainer"]
+margin_left = 302.0
+margin_right = 601.0
+margin_bottom = 580.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="Header" type="Panel" parent="Margin/HBoxContainer/AnswerContainer"]
+margin_right = 299.0
+margin_bottom = 52.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.12
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Margin/HBoxContainer/AnswerContainer/Header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+custom_fonts/font = ExtResource( 6 )
+text = "Slot Jawaban"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Panel" parent="Margin/HBoxContainer/AnswerContainer"]
+margin_top = 56.0
+margin_right = 299.0
+margin_bottom = 580.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.2
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Margin/HBoxContainer/AnswerContainer/Body"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer"]
+margin_right = 299.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 27
+custom_constants/margin_top = 16
+custom_constants/margin_left = 27
+custom_constants/margin_bottom = 16
+
+[node name="GridContainer" type="GridContainer" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer"]
+margin_left = 27.0
+margin_top = 16.0
+margin_right = 272.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Dropzone" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
+answer_texture = ExtResource( 10 )
+
+[node name="Dropzone2" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
+margin_left = 124.0
+margin_right = 244.0
+answer_texture = ExtResource( 11 )
+label_num = 2
+
+[node name="Dropzone3" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
+margin_top = 124.0
+margin_bottom = 244.0
+answer_texture = ExtResource( 11 )
+label_num = 3
+
+[node name="Dropzone4" parent="Margin/HBoxContainer/AnswerContainer/Body/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource( 3 )]
+margin_left = 124.0
+margin_top = 124.0
+margin_right = 244.0
+margin_bottom = 244.0
+answer_texture = ExtResource( 10 )
+label_num = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin/HBoxContainer"]
+margin_left = 605.0
+margin_right = 1004.0
+margin_bottom = 580.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="ProgramContainer" type="VBoxContainer" parent="Margin/HBoxContainer/VBoxContainer"]
+margin_right = 399.0
+margin_bottom = 288.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Header" type="Panel" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer"]
+margin_right = 399.0
+margin_bottom = 53.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.28
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_right = -10.0
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer"]
+margin_top = 16.0
+margin_right = 240.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+size_flags_stretch_ratio = 8.53
+custom_fonts/font = ExtResource( 6 )
+text = "Program"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Run" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer"]
+margin_left = 247.0
+margin_top = 14.0
+margin_right = 320.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Jalankan"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer"]
+margin_left = 327.0
+margin_top = 14.0
+margin_right = 379.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 13 )
+custom_styles/pressed = ExtResource( 13 )
+custom_styles/focus = ExtResource( 13 )
+custom_styles/disabled = ExtResource( 13 )
+custom_styles/normal = ExtResource( 13 )
+text = "Ulang"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer"]
+visible = false
+margin_left = 267.0
+margin_top = 14.0
+margin_right = 379.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Selanjutnya ..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Panel" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer"]
+margin_top = 57.0
+margin_right = 399.0
+margin_bottom = 288.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.2
+custom_styles/panel = SubResource( 2 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/ScrollContainer"]
+margin_right = 540.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Code" type="RichTextLabel" parent="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Body/ScrollContainer/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 520.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 500, 400 )
+rect_clip_content = false
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/mono_font = ExtResource( 7 )
+custom_fonts/bold_font = ExtResource( 8 )
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[b]Objektif[/b]: Buat 1 jus apel
+[code]
+1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color]([color=grey][wave amp=50 freq=2]..1..[/wave][/color])
+2 [color=red]Jus[/color] jus = [color=green]blender[/color]([color=grey][wave amp=50 freq=2]..2..[/wave][/color])
+3 [color=green]sajikan[/color]([color=grey][wave amp=50 freq=2]..3..[/wave][/color])
+[/code]"
+text = "Objektif: Buat 1 jus apel
+
+1 Apel buah = ambilBuah(..1..)
+2 Jus jus = blender(..2..)
+3 sajikan(..3..)
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ObjectiveVideoContainer" type="VBoxContainer" parent="Margin/HBoxContainer/VBoxContainer"]
+margin_top = 292.0
+margin_right = 399.0
+margin_bottom = 580.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Header" type="Panel" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer"]
+margin_right = 399.0
+margin_bottom = 56.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_right = -10.0
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer"]
+margin_top = 18.0
+margin_right = 297.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+size_flags_stretch_ratio = 8.53
+custom_fonts/font = ExtResource( 6 )
+text = "Uji Coba Objektif"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpandVideoButton" type="Button" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer"]
+margin_left = 304.0
+margin_top = 16.0
+margin_right = 379.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Perbesar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Panel" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer"]
+margin_top = 60.0
+margin_right = 399.0
+margin_bottom = 288.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+custom_styles/panel = SubResource( 2 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/ViewportContainer"]
+size = Vector2( 399, 228 )
+size_override_stretch = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="ExplorationPhase" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/ViewportContainer/Viewport" instance=ExtResource( 49 )]
+scale = Vector2( 0.4, 0.4 )
+
+[node name="HelpButton" type="Button" parent="."]
+margin_left = 22.0
+margin_top = 542.0
+margin_right = 100.0
+margin_bottom = 577.0
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Bantuan"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ObjectiveVideoContainer2" type="VBoxContainer" parent="Popup"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1014.0
+margin_bottom = 590.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Header" type="Panel" parent="Popup/ObjectiveVideoContainer2"]
+margin_right = 1004.0
+margin_bottom = 54.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/ObjectiveVideoContainer2/Header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_right = -10.0
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Popup/ObjectiveVideoContainer2/Header/HBoxContainer"]
+margin_top = 17.0
+margin_right = 874.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+size_flags_stretch_ratio = 8.53
+custom_fonts/font = ExtResource( 6 )
+text = "Uji Coba Objektif"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpandVideoButton" type="Button" parent="Popup/ObjectiveVideoContainer2/Header/HBoxContainer"]
+margin_left = 881.0
+margin_top = 15.0
+margin_right = 984.0
+margin_bottom = 39.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Perkecil"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Panel" parent="Popup/ObjectiveVideoContainer2"]
+margin_top = 58.0
+margin_right = 1004.0
+margin_bottom = 580.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.95
+custom_styles/panel = SubResource( 2 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="Popup/ObjectiveVideoContainer2/Body"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="Popup/ObjectiveVideoContainer2/Body/ViewportContainer"]
+size = Vector2( 1004, 522 )
+size_override_stretch = true
+handle_input_locally = false
+render_target_update_mode = 0
+gui_disable_input = true
+
+[node name="ExplorationPhase" parent="Popup/ObjectiveVideoContainer2/Body/ViewportContainer/Viewport" instance=ExtResource( 49 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 9 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Run" to="." method="_on_Run_pressed"]
+[connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/ExpandVideoButton" to="." method="_on_ExpandVideoButton_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]
+[connection signal="pressed" from="Popup/ObjectiveVideoContainer2/Header/HBoxContainer/ExpandVideoButton" to="." method="_on_ExpandVideoButton_pressed"]
