@@ -15,6 +15,14 @@
 			"text": "Sebuah perusahaan teknologi yang ternama di kota ini. Scaffcode INC. telah membantu masyarakat memudahkan pekerjaan sehari-hari mereka dengan cara mengembangkan Scaffbot.",
 			"title": "Scaffcode INC.",
 			"type": 1
+		},
+		{
+			"extra": "",
+			"id": "1652794555-353",
+			"name": "tipe data",
+			"text": "Jenis dari sebuah data yang memiliki suatu kesamaan. Contohnya [color=red]number[/color], [color=red]Buah[/color], [color=red]Jus[/color], dsb.",
+			"title": "Tipe Data",
+			"type": 1
 		}
 	],
 	"variables": [

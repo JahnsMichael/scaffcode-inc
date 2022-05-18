@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://gameplay/components/AutomationPhase/AutomationPhase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gameplay/resources/images/texts/var_jus.png" type="Texture" id=2]
@@ -6,15 +6,15 @@
 [ext_resource path="res://gameplay/resources/images/texts/var_buah.png" type="Texture" id=4]
 [ext_resource path="res://gameplay/resources/images/items/fruit_avocado.png" type="Texture" id=5]
 [ext_resource path="res://gameplay/resources/images/texts/type_Jus.png" type="Texture" id=6]
-[ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/1_VariableDataType_preview.tscn" type="PackedScene" id=7]
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 2 ) ]
+hint_dialog_names = [ "hint-1-2-1", "hint-empty", "hint-1-2-3", "hint-empty", "hint-empty" ]
 bbcode_code_snippet = "[b]Objektif[/b]: Buat 1 jus Alpukat
 [code]
 1 @1 buah = [color=green]ambilBuah[/color](@2)
 2 @3 jus = [color=green]blender[/color](@4)
 3 [color=green]sajikan[/color](@5)
 [/code]"
-exploration_preview_scene = ExtResource( 7 )
-dialog_name = "Advi-Variabel Done"
+help_dialog_name = "Automasi-Bantuan-Variabel"
+end_dialog_name = "Advi-Variabel Done"

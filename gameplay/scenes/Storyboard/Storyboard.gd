@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	yield(SceneChanger, "scene_changed")
 	start_dialog()
 
 func start_dialog():
@@ -15,6 +16,6 @@ func start_dialog():
 func dialog_listener(_string):
 	SceneChanger.change_scene("res://gameplay/scenes/Maps/JuiceBar.tscn")
 
-func end_dialog(data):
+func end_dialog(_data):
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

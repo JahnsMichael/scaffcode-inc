@@ -1,0 +1,75 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kegiatan kali ini cocok untuk jadi bahan pembelajaran kita mengenai [color=green]perulangan[/color]"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Saya sudah menyiapkan contoh kode program yang belum lengkap dan kamu akan belajar pemrograman dengan cara melengkapinya."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sesuai namanya, perulangan adalah suatu cara kita melakukan satu atau lebih perintah secara berulang-ulang."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Perulangan adalah cara yang cocok untuk mengerjakan tugas seperti \"Buatlah 10 jus\", karena pastinya cara membuat 10 jus akan sama dengan cara membuat 1 jus diulang 10 kali."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Di dalam Scaffbot terdapat kata kunci [color=blue]while[/color] yang kegunaannya sama seperti artinya, yaitu \"selama\"."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bentuk umum dari perulangan adalah [color=blue]while[/color] ( [i]suatuKondisi[/i] ) { [i]perintah[/i] }, artinya [i]perintah[/i] akan dijalankan berulang-ulang  terus menerus selama kondisi [i]suatuKondisi[/i] masih terpenuhi. Teknik perulangan memerlukan kecerdikan kita untuk membuat kondisi tertentu supaya perulangannya berhenti, yaitu saat [i]suatuKondisi[/i] sudah tidak lagi terpenuhi."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Jika kamu kebingungan atau lupa, tekan saja tombol [color=green]Bantuan[/color] untuk menanyakan konsep-konsep yang kujelaskan tadi. Selamat belajar!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652799408.json",
+		"name": "Automasi-Intro-Loop"
+	}
+}

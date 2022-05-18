@@ -18,5 +18,5 @@ func start_dialog():
 		dialog.connect("dialogic_signal", self, "dialog_listener")
 		get_tree().paused = true
 
-func end_dialog(data):
+func end_dialog(_data):
 	get_tree().paused = false

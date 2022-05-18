@@ -18,6 +18,10 @@
 		{
 			"name": "Mirror",
 			"path": "res://gameplay/resources/images/characters/advi-mirror.png"
+		},
+		{
+			"name": "Empty",
+			"path": ""
 		}
 	],
 	"scale": 100,

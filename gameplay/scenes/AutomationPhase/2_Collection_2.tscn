@@ -9,10 +9,12 @@
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ]
+hint_dialog_names = [ "hint-2-2-1", "hint-empty", "hint-empty", "hint-empty" ]
 bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 pisang ke dalam kotak pisang
 [code]
 1 @1[] kotakPisang = [color=red]Pisang[/color][10]()
 2 kotakPisang[color=green]@2[/color](@3, @4)
 [/code]"
 exploration_preview_scene = ExtResource( 6 )
-dialog_name = "Advi-Koleksi Done"
+help_dialog_name = "Automasi-Bantuan-Collection"
+end_dialog_name = "Advi-Koleksi Done"

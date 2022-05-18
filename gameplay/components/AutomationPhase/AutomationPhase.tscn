@@ -500,6 +500,22 @@ render_target_update_mode = 3
 [node name="ExplorationPhase" parent="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Body/ViewportContainer/Viewport" instance=ExtResource( 49 )]
 scale = Vector2( 0.4, 0.4 )
 
+[node name="HelpButton" type="Button" parent="."]
+margin_left = 22.0
+margin_top = 542.0
+margin_right = 100.0
+margin_bottom = 577.0
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/disabled = ExtResource( 12 )
+custom_styles/normal = ExtResource( 12 )
+text = "Bantuan"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Popup" type="Popup" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -600,4 +616,5 @@ autoplay = true
 [connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Reset" to="." method="_on_Reset_pressed"]
 [connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ProgramContainer/Header/HBoxContainer/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="Margin/HBoxContainer/VBoxContainer/ObjectiveVideoContainer/Header/HBoxContainer/ExpandVideoButton" to="." method="_on_ExpandVideoButton_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]
 [connection signal="pressed" from="Popup/ObjectiveVideoContainer2/Header/HBoxContainer/ExpandVideoButton" to="." method="_on_ExpandVideoButton_pressed"]

@@ -1,7 +1,8 @@
 extends Control
 
 export(PackedScene) var play_scene
-export(PackedScene) var credit_scene
+
+onready var popup = $PopupPanel
 
 func _ready():
 	get_tree().paused = false
@@ -9,3 +10,7 @@ func _ready():
 
 func _on_PlayButton_pressed():
 	SceneChanger.change_scene_to(play_scene)
+
+
+func _on_CreditButton_pressed():
+	popup.popup()

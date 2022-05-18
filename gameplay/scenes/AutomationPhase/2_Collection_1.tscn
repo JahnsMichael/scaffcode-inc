@@ -8,6 +8,7 @@
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 3 ), ExtResource( 2 ) ]
+hint_dialog_names = [ "hint-2-1-1", "hint-2-1-1" ]
 bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 apel ke dalam kotak apel
 [code]
 1 [color=red]Apel[/color][] kotakApel = [color=red]Apel[/color][10]()
@@ -15,3 +16,5 @@ bbcode_code_snippet = "[b]Objektif[/b]: Masukkan 10 apel ke dalam kotak apel
 [/code]"
 exploration_preview_scene = ExtResource( 5 )
 next_scene = ExtResource( 4 )
+start_dialog_name = "Automasi-Intro-Collection"
+help_dialog_name = "Automasi-Bantuan-Collection"

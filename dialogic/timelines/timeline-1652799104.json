@@ -1,0 +1,110 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "Pertanyaan"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Ada yang ingin kamu tanyakan?"
+		},
+		{
+			"choice": "Mengenai percabangan",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Percabangan adalah cara kita menentukan ingin melakukan sesuatu atau tidak berdasarkan suatu kondisi tertentu."
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Contohnya dalam bahasa sehari-hari, \"Jika buah ini busuk. maka buang buah tersebut, namun jika tidak, blender menjadi jus dan sajikan.\""
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Mengenai if dan else",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Di dalam Scaffbot terdapat kata kunci [color=blue]if[/color] dan [color=blue]else[/color] yang kegunaannya sama seperti artinya, yaitu \"jika\" dan \"namun jika\"."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bentuk umum dari percabangan adalah [color=blue]if[/color] ( [i]suatuKondisi[/i] ) { [i]perintah[/i] }, artinya [i]perintah[/i] akan dijalankan jika kondisi [i]suatuKondisi[/i] terpenuhi. Jika kalimat tersebut dilanjutkan dengan [color=blue]else[/color]  { [i]perintah2[/i] } maka [i]perintah2[/i] akan dijalankan jika kondisi [i]suatuKondisi[/i] tidak terpenuhi."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Tidak jadi",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Baiklah, jangan sungkan memanggilku jika ada kesulitan."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1652799104.json",
+		"name": "Automasi-Bantuan-Branching"
+	}
+}

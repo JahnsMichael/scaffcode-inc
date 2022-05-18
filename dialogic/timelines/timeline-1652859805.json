@@ -24,24 +24,22 @@
 			"character": "character-1651490996.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Selamat, kamu telah menyelesaikan bagian Pengulangan/Iterasi. Kamu telah menyelesaikan semua hal yang diminta Lemi kepadamu. Kembalilah ke tempat jus dan bicaralah padaku."
+			"text": "Sedikit clue untukmu, masih ingat tipe data koleksi? Saat membuat tipe data koleksi, kita juga perlu mendefinisikan tipe data tunggalnya, lalu diakhir dengan tanda \"[]\" yang artinya dapat mengandung lebih dari satu data."
 		},
 		{
-			"definition": "1651492576-848",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "1"
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sesuai dengan objektif kali ini, apa tipe data dari buah yang ingin ditambahkan?"
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1651653527.json",
-		"name": "Advi-Iterasi Done"
+		"file": "timeline-1652859805.json",
+		"name": "hint-2-2-1"
 	}
 }

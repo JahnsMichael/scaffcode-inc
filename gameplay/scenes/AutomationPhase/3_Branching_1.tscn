@@ -8,6 +8,7 @@
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
 answers_texture = [ ExtResource( 2 ), ExtResource( 3 ) ]
+hint_dialog_names = [ "hint-empty", "hint-3-1-1" ]
 bbcode_code_snippet = "[b]Objektif[/b]: Cek kualitas buah sebelum membuat jus
 [code]
 1 [color=red]Apel[/color] buah = [color=green]ambilBuah[/color](@1)
@@ -20,3 +21,5 @@ bbcode_code_snippet = "[b]Objektif[/b]: Cek kualitas buah sebelum membuat jus
 [/code]"
 exploration_preview_scene = ExtResource( 5 )
 next_scene = ExtResource( 4 )
+start_dialog_name = "Automasi-Intro-Branching"
+help_dialog_name = "Automasi-Bantuan-Branching"

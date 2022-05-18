@@ -24,24 +24,22 @@
 			"character": "character-1651490996.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Selamat, kamu telah menyelesaikan bagian Pengulangan/Iterasi. Kamu telah menyelesaikan semua hal yang diminta Lemi kepadamu. Kembalilah ke tempat jus dan bicaralah padaku."
+			"text": "Sedikit clue untukmu, jawabannya merupakan suatu data dengan tipe data [color=red]Apel[/color]. Data dengan tipe data buah-buahan biasanya benar-benar berbentuk buah, bukan teks."
 		},
 		{
-			"definition": "1651492576-848",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "1"
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mungkin kamu ingat, kalau [color=green]ambilBuah[/color] menerima input berupa data dengan tipe data [color=red]Buah[/color] dan menghasilkan buah tersebut. "
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1651653527.json",
-		"name": "Advi-Iterasi Done"
+		"file": "timeline-1652858247.json",
+		"name": "hint-1-1-1"
 	}
 }

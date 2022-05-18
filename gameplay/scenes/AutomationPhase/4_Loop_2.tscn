@@ -11,14 +11,15 @@
 [ext_resource path="res://gameplay/scenes/ExplorationPhase/preview/4_Loop_preview.tscn" type="PackedScene" id=9]
 
 [node name="AutomationPhase" instance=ExtResource( 1 )]
-answers_texture = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ) ]
+answers_texture = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 8 ) ]
+hint_dialog_names = [ "hint-4-2-1", "hint-empty", "hint-empty", "hint-empty", "hint-4-2-5", "hint-4-2-5", "hint-4-2-5" ]
 bbcode_code_snippet = "[b]Objektif[/b]: Buat 10 jus apel
 [code]
 1 [color=red]number[/color] jumlahJus = 0
 2 [color=blue]while[/color] (jumlahJus [color=#f99602]<=[/color] @1) {
 3     [color=red]Apel[/color] buah = [color=green]ambilBuah[/color](@2)
-4     if (@3 [color=#f99602]==[/color] @4) {
-5         [color=green]buang[/color](buah)
+4     if (buah [color=#f99602]==[/color] @3) {
+5         [color=green]buang[/color](@4)
 6     } else {
 7         [color=red]Jus[/color] jus = [color=green]blender[/color](buah)
 8         [color=green]sajikan[/color](jus)
@@ -27,4 +28,5 @@ bbcode_code_snippet = "[b]Objektif[/b]: Buat 10 jus apel
 11 }
 [/code]"
 exploration_preview_scene = ExtResource( 9 )
-dialog_name = "Advi-Iterasi Done"
+help_dialog_name = "Automasi-Bantuan-Loop"
+end_dialog_name = "Advi-Iterasi Done"

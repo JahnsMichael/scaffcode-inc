@@ -24,24 +24,22 @@
 			"character": "character-1651490996.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Selamat, kamu telah menyelesaikan bagian Pengulangan/Iterasi. Kamu telah menyelesaikan semua hal yang diminta Lemi kepadamu. Kembalilah ke tempat jus dan bicaralah padaku."
+			"text": "Sedikit clue untukmu, jawabannya merupakan suatu [b]variabel[/b] dengan tipe data [color=red]Jus[/color]. Apakah di baris sebelumnya terdapat variabel yang bertipe data [color=red]Jus[/color]?"
 		},
 		{
-			"definition": "1651492576-848",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "1"
+			"character": "character-1651490996.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mungkin kamu ingat, kalau [color=green]sajikan[/color] menerima input berupa data dengan tipe data [color=red]Jus[/color] namun tidak memberikan output apapun karena hanya menyajikan jus ke konsumen."
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1651653527.json",
-		"name": "Advi-Iterasi Done"
+		"file": "timeline-1652858695.json",
+		"name": "hint-1-1-3"
 	}
 }

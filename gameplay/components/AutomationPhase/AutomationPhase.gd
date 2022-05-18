@@ -3,10 +3,13 @@ extends Control
 # Attributes
 export(Array, Texture) var spawners_texture
 export(Array, Texture) var answers_texture
+export(Array, String) var hint_dialog_names
 export(String, MULTILINE) var bbcode_code_snippet
 export(PackedScene) var exploration_preview_scene
 export(PackedScene) var next_scene
-export(String) var dialog_name
+export(String) var start_dialog_name
+export(String) var help_dialog_name
+export(String) var end_dialog_name
 
 # References
 onready var spawner_container: GridContainer = $Margin/HBoxContainer/ChoicesContainer/Body/ScrollContainer/MarginContainer/GridContainer
@@ -41,6 +44,9 @@ func _ready():
 	generate_dropzones()
 	generate_code_snippet()
 	generate_viewports()
+	
+	yield(SceneChanger, "scene_changed")
+	dialog(start_dialog_name)
 
 func generate_spawners():
 	for placeholder_spawner in spawner_container.get_children():
@@ -48,7 +54,6 @@ func generate_spawners():
 	for texture in spawners_texture:
 		var spawner = spawner_scene.instance()
 		spawner.texture = texture
-#		spawner.adjust_texture_margin()
 		spawner_container.add_child(spawner)
 
 func generate_dropzones():
@@ -59,6 +64,7 @@ func generate_dropzones():
 		dropzone.label_num = i + 1
 		dropzone.answer_texture = answers_texture[i]
 		dropzone.connect("data_changed", self,"_on_data_changed")
+		dropzone.connect("hint_pressed", self,"_on_hint_pressed")
 		dropzone_container.add_child(dropzone)
 
 func generate_code_snippet():
@@ -102,8 +108,11 @@ func _on_data_changed(_dropzone: Dropzone):
 				dropzone._icon.texture
 			)
 	code_textbox.bbcode_text = new_bbcode_text
+	
+func _on_hint_pressed(dropzone: Dropzone):
+	dialog(hint_dialog_names[dropzone.label_num - 1])
 
-func dialog():
+func dialog(dialog_name):
 	if !dialog_name:
 		return
 
@@ -113,7 +122,7 @@ func dialog():
 	dialog.connect("timeline_end", self, "end_dialog")
 	get_tree().paused = true
 
-func end_dialog(data):
+func end_dialog(_data):
 	get_tree().paused = false
 
 # Signals
@@ -127,7 +136,7 @@ func _on_Run_pressed():
 	for dropzone in dropzone_container.get_children():
 		all_true = dropzone.validate() && all_true
 	if all_true:
-		dialog()
+		dialog(end_dialog_name)
 		next_button.visible = true
 	else:
 		next_button.visible = false
@@ -143,3 +152,6 @@ func _on_ExpandVideoButton_pressed():
 
 func _on_Next_pressed():
 	SceneChanger.change_scene_to(next_scene)
+
+func _on_HelpButton_pressed():
+	dialog(help_dialog_name)

@@ -28,6 +28,6 @@ func start_dialog():
 	dialog.connect("timeline_end", self, "end_dialog")
 	get_tree().paused = true
 
-func end_dialog(data):
+func end_dialog(_data):
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
